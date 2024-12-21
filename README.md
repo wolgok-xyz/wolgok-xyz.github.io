@@ -1,1 +1,1 @@
-# wolgok-xyz.github.io
+# Wolgok AI Research Team
