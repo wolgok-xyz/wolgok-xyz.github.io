@@ -82,7 +82,7 @@ export default function AnimatedBackground() {
 		});
 
 		// Create connections between close particles
-		const lineGeometries = [];
+		const lineGeometries: THREE.Line[] = [];
 		const maxDistance = 2; // Maximum distance for connection
 
 		for (let i = 0; i < particlesCount; i++) {
