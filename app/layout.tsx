@@ -11,36 +11,36 @@ import LoadingAnimation from '@/components/common/LoadingAnimation';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-	title: 'Prity Karmaker | M.Sc. Chemistry Student',
-	description: 'Personal website of Prity Karmaker, an M.Sc. Chemistry student from West Bengal, India, showcasing academic achievements, research projects, and professional aspirations.',
-	keywords: 'Prity Karmaker, Chemistry, Researcher, West Bengal, India, M.Sc. Chemistry, Chemical Research, Student Portfolio',
+  title: 'Prity Karmaker | M.Sc. Chemistry Student',
+  description: 'Personal website of Prity Karmaker, an M.Sc. Chemistry student from West Bengal, India, showcasing academic achievements, research projects, and professional aspirations.',
+  keywords: 'Prity Karmaker, Chemistry, Researcher, West Bengal, India, M.Sc. Chemistry, Chemical Research, Student Portfolio',
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: {
-	children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-	return (
-		<html lang="en" suppressHydrationWarning>
-			<link rel="shortcut icon" href="/flask.png" type="image/x-icon" />
-			<body className={inter.className}>
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="system"
-					enableSystem
-					disableTransitionOnChange
-				>
-					<LoadingAnimation />
-					<Navbar />
-					<main className="min-h-screen">
-						{children}
-					</main>
-					<Footer />
-					<ThemeToggle />
-					<Toaster position="bottom-right" />
-				</ThemeProvider>
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en" suppressHydrationWarning>
+		<link rel="shortcut icon" href="./flask.png" type="image/x-icon" />
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <LoadingAnimation />
+          <Navbar />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+          <ThemeToggle />
+          <Toaster position="bottom-right" />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
 }

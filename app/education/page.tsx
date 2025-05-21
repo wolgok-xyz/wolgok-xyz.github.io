@@ -4,21 +4,21 @@ import PageHeader from '@/components/common/PageHeader';
 import EducationTimeline from '@/components/education/EducationTimeline';
 
 export const metadata: Metadata = {
-	title: 'Education | Prity Karmaker',
-	description: 'Explore Prity Karmaker\'s academic journey, qualifications, and achievements in the field of chemistry.',
+  title: 'Education | Prity Karmaker',
+  description: 'Explore Prity Karmaker\'s academic journey, qualifications, and achievements in the field of chemistry.',
 };
 
 export default function EducationPage() {
-	return (
-		<div className="pt-24">
-			<SectionContainer>
-				<PageHeader
-					title="Education"
-					description="My academic journey and qualifications in the field of chemistry."
-				/>
-
-				<EducationTimeline />
-			</SectionContainer>
-		</div>
-	);
+  return (
+    <div className="pt-24">
+      <SectionContainer>
+        <PageHeader
+          title="Education"
+          description="My academic journey and qualifications in the field of chemistry."
+        />
+        
+        <EducationTimeline />
+      </SectionContainer>
+    </div>
+  );
 }
