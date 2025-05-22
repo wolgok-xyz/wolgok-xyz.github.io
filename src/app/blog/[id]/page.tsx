@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import { Metadata, type PageProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import blogData from "@/data/blogData";
@@ -9,7 +9,9 @@ export const metadata: Metadata = {
   description: "Detailed information about our research projects",
 };
 
-export default function BlogDetails({ params }: { params: { id: string } }) {
+interface BlogDetailsProps extends PageProps<{ id: string }> {}
+
+export default function BlogDetails({ params }: BlogDetailsProps) {
   const blog = blogData.find((blog) => blog.id === parseInt(params.id));
 
   if (!blog) {
