@@ -8,8 +8,8 @@ const Features = () => {
       <section id="features" className="py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
-            title="Main Features"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title="Research Interests"
+            paragraph="Our lab's research interests span integrated vision, language, and action systems, focusing on embodied AI, general intelligence, computer vision, and natural language understanding. We aim to advance the science and engineering of intelligent agents that can perceive, reason, and act in the real world."
             center
           />
 

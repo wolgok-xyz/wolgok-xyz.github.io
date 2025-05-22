@@ -9,14 +9,8 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "About",
-    path: "/about",
-    newTab: false,
-  },
-  {
-    id: 3,
     title: "People",
-    path: "/people",
+    path: "/about",
     newTab: false,
   },
   {
@@ -27,64 +21,15 @@ const menuData: Menu[] = [
   },
   {
     id: 5,
-    title: "Support",
-    path: "/contact",
+    title: "Publications",
+    path: "/publications",
     newTab: false,
   },
   {
     id: 6,
-    title: "Pages",
+    title: "Contact",
+    path: "/contact",
     newTab: false,
-    submenu: [
-      {
-        id: 61,
-        title: "About Page",
-        path: "/about",
-        newTab: false,
-      },
-      {
-        id: 62,
-        title: "Contact Page",
-        path: "/contact",
-        newTab: false,
-      },
-      {
-        id: 63,
-        title: "Blog Grid Page",
-        path: "/blog",
-        newTab: false,
-      },
-      {
-        id: 64,
-        title: "Blog Sidebar Page",
-        path: "/blog-sidebar",
-        newTab: false,
-      },
-      {
-        id: 65,
-        title: "Blog Details Page",
-        path: "/blog-details",
-        newTab: false,
-      },
-      {
-        id: 66,
-        title: "Sign In Page",
-        path: "/signin",
-        newTab: false,
-      },
-      {
-        id: 67,
-        title: "Sign Up Page",
-        path: "/signup",
-        newTab: false,
-      },
-      {
-        id: 68,
-        title: "Error Page",
-        path: "/error",
-        newTab: false,
-      },
-    ],
   },
 ];
 export default menuData;
