@@ -1,14 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.sanity.io",
-        port: "",
-      },
-    ],
+    unoptimized: true,
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/wolgok-xyz.github.io' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/wolgok-xyz.github.io/' : '',
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
