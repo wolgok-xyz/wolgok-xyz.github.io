@@ -42,7 +42,7 @@ export default function Footer() {
 								<span className="sr-only">LinkedIn</span>
 							</Link>
 							<Link
-								href="mailto:prity.karmaker@example.com"
+								href="mailto:Jhon Doe.karmaker@example.com"
 								className="text-muted-foreground hover:text-primary transition-colors"
 							>
 								<Mail size={20} />
@@ -103,7 +103,7 @@ export default function Footer() {
 							West Bengal, India
 						</p>
 						<p className="text-sm text-muted-foreground mb-2">
-							prity.karmaker@example.com
+							Jhon Doe.karmaker@example.com
 						</p>
 						<p className="text-sm text-muted-foreground">
 							+91 98765 43210

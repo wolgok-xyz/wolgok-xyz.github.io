@@ -40,7 +40,7 @@ export default function AboutContent() {
 				<h2 className="text-3xl font-bold mb-6">About Me</h2>
 
 				<p className="text-muted-foreground">
-					Hello! I'm Prity, a passionate M.Sc. Chemistry student from West Bengal, India, with a deep interest in research and innovation in chemical sciences. My academic journey has been driven by curiosity and a desire to contribute to sustainable solutions through chemistry.
+					Hello! I'm Jhon Doe, a passionate M.Sc. Chemistry student from West Bengal, India, with a deep interest in research and innovation in chemical sciences. My academic journey has been driven by curiosity and a desire to contribute to sustainable solutions through chemistry.
 				</p>
 
 				<p className="text-muted-foreground">
