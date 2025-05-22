@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import blogData from "@/components/Blog/blogData";
+import blogData from "@/data/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 export const metadata: Metadata = {
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Detailed information about our research projects",
 };
 
-const BlogDetails = async ({ params }: { params: { id: string } }) => {
+export default function BlogDetails({ params }: { params: { id: string } }) {
   const blog = blogData.find((blog) => blog.id === parseInt(params.id));
 
   if (!blog) {
@@ -113,6 +113,4 @@ const BlogDetails = async ({ params }: { params: { id: string } }) => {
       </section>
     </>
   );
-};
-
-export default BlogDetails; 
+} 

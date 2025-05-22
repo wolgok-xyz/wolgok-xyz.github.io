@@ -45,4 +45,4 @@ const blogData: Blog[] = [
   },
 ];
 
-export default blogData;
+export default blogData; 
