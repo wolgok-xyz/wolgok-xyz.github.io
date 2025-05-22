@@ -50,10 +50,10 @@ export default function Navbar() {
               href="/"
               className="text-xl md:text-2xl font-bold text-primary"
             >
-              Prity Karmaker
+              Jhon Doe
             </Link>
           </div>
-          
+
           {/* Desktop navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
@@ -73,7 +73,7 @@ export default function Navbar() {
               ))}
             </div>
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
