@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Detailed information about our research projects",
 };
 
-const BlogDetails = ({ params }: { params: { id: string } }) => {
+const BlogDetails = async ({ params }: { params: { id: string } }) => {
   const blog = blogData.find((blog) => blog.id === parseInt(params.id));
 
   if (!blog) {
