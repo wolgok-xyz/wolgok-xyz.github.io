@@ -119,4 +119,3 @@ export default function BlogDetails({ params }: BlogDetailsProps) {
       </section>
     </>
   );
-} 
