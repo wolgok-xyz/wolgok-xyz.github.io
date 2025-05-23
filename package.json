@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export"
   },
   "dependencies": {
     "eslint": "^8.56.0",
@@ -23,8 +24,13 @@
     "@types/react": "^18.2.57",
     "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.4.17",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.6.11",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "13.4.19",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

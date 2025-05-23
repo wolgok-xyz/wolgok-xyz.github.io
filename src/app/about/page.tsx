@@ -14,8 +14,8 @@ const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="People"
+        description="Meet our research team, dedicated to advancing embodied artificial general intelligence. Our members specialize in robotics, computer vision, natural language processing, and integrated AI systems, working together to push the boundaries of intelligent agents."
       />
       <AboutSectionOne />
       <AboutSectionTwo />
