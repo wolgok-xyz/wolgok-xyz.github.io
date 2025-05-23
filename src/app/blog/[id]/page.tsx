@@ -9,7 +9,13 @@ export const metadata: Metadata = {
   description: "Detailed information about our research projects",
 };
 
-export default function BlogDetails({ params }: { params: { id: string } }) {
+interface BlogDetailsProps {
+  params: {
+    id: string;
+  };
+}
+
+export default function BlogDetails({ params }: BlogDetailsProps) {
   const blog = blogData.find((blog) => blog.id === parseInt(params.id));
 
   if (!blog) {
