@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   description: "Detailed information about our research projects",
 };
 
+export async function generateStaticParams() {
+  return blogData.map((blog) => ({
+    id: blog.id.toString(),
+  }));
+}
+
 interface BlogDetailsProps {
   params: {
     id: string;
@@ -119,3 +125,4 @@ export default function BlogDetails({ params }: BlogDetailsProps) {
       </section>
     </>
   );
+}
