@@ -56,9 +56,9 @@ export const projects = [
 ];
 
 export const contactInfo = {
-	email: "Jhon Doe.karmaker@example.com",
-	phone: "+91 98765 43210",
-	address: "Kolkata, West Bengal, India",
+	email: "hslim@kist.re.kr",
+	phone: "+82 2 958 5753",
+	address: "Seoul, Korea",
 	socialMedia: {
 		linkedin: "https://linkedin.com",
 		twitter: "https://twitter.com",

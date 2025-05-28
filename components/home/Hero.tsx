@@ -1,8 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import CVButton from '@/components/common/CVButton';
-import OpenToBadge from '@/components/home/OpenToBadge';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
 
@@ -34,41 +32,36 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background" />
 
       <motion.div
-        className="text-center z-10 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto"
+        className="text-center z-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
         variants={container}
         initial="hidden"
         animate="show"
       >
-        <motion.div variants={item} className="mb-6">
-          <OpenToBadge />
-        </motion.div>
-
         <motion.h1
           variants={item}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight whitespace-nowrap"
         >
-          Jhon Doe
+          <span className="text-red-500">KIST</span> Embodied AGI Research Team
         </motion.h1>
 
         <motion.h2
           variants={item}
-          className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8"
+          className="text-xl md:text-2xl text-muted-foreground mb-6"
         >
-          M.Sc. Chemistry Student <span className="hidden md:inline">|</span><br className="md:hidden" /> West Bengal, India
+          Center for Artificial Intelligence Research <span className="hidden md:inline">|</span><br className="md:hidden" /> KIST
         </motion.h2>
 
         <motion.p
           variants={item}
           className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto"
         >
-          Exploring the fascinating world of chemical sciences with a focus on sustainable research and innovative solutions.
+          Pioneering the future of artificial general intelligence through embodied learning and human-robot interaction research.
         </motion.p>
 
         <motion.div
           variants={item}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <CVButton className="w-full sm:w-auto" />
           <Link
             href="/contact"
             className="w-full sm:w-auto bg-secondary text-secondary-foreground hover:bg-secondary/80 px-6 py-2 rounded-md transition-colors font-medium"

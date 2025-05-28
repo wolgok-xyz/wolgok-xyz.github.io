@@ -4,9 +4,9 @@ import AboutContent from '@/components/about/AboutContent';
 import SectionContainer from '@/components/common/SectionContainer';
 import PageHeader from '@/components/common/PageHeader';
 import AnimatedBackground from '@/components/common/AnimatedBackground';
-import CVButton from '@/components/common/CVButton';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
@@ -63,7 +63,7 @@ export default function Home() {
               href="/contact" 
               className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
             >
-              Contact me <ArrowRight className="ml-1 h-4 w-4" />
+              Contact Team <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -72,7 +72,6 @@ export default function Home() {
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             Looking for my full credentials? Download my comprehensive CV to learn more about my academic achievements, research experience, and professional skills.
           </p>
-          <CVButton variant="outline" />
         </div>
       </SectionContainer>
     </>

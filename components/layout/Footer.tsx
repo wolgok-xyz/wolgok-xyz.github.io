@@ -9,9 +9,9 @@ export default function Footer() {
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<div>
-						<h3 className="text-lg font-semibold mb-4">Jhon Doe</h3>
+						<h3 className="text-lg font-semibold mb-4"><span className="text-red-500">KIST</span> Embodied AGI Research Team</h3>
 						<p className="text-sm text-muted-foreground mb-4">
-							M.Sc. Chemistry Student passionate about research and innovation in chemical sciences.
+							Advancing artificial general intelligence through embodied learning and human-robot interaction research.
 						</p>
 						<div className="flex space-x-4">
 							<Link
@@ -42,7 +42,7 @@ export default function Footer() {
 								<span className="sr-only">LinkedIn</span>
 							</Link>
 							<Link
-								href="mailto:Jhon Doe.karmaker@example.com"
+								href="mailto:hslim@kist.re.kr"
 								className="text-muted-foreground hover:text-primary transition-colors"
 							>
 								<Mail size={20} />
@@ -72,10 +72,10 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href="/education"
+									href="/people"
 									className="text-sm text-muted-foreground hover:text-primary transition-colors"
 								>
-									Education
+									People
 								</Link>
 							</li>
 							<li>
@@ -84,6 +84,14 @@ export default function Footer() {
 									className="text-sm text-muted-foreground hover:text-primary transition-colors"
 								>
 									Projects
+								</Link>
+							</li>
+							<li>
+								<Link
+									href="/publications"
+									className="text-sm text-muted-foreground hover:text-primary transition-colors"
+								>
+									Publications
 								</Link>
 							</li>
 							<li>
@@ -100,20 +108,20 @@ export default function Footer() {
 					<div>
 						<h3 className="text-lg font-semibold mb-4">Contact</h3>
 						<p className="text-sm text-muted-foreground mb-2">
-							West Bengal, India
+							KIST Embodided AGI Research
 						</p>
 						<p className="text-sm text-muted-foreground mb-2">
-							Jhon Doe.karmaker@example.com
+							hslim@kist.re.kr
 						</p>
 						<p className="text-sm text-muted-foreground">
-							+91 98765 43210
+							+82 2 958 5753
 						</p>
 					</div>
 				</div>
 
 				<div className="mt-8 pt-8 border-t border-muted text-center">
 					<p className="text-sm text-muted-foreground">
-						© {currentYear} Jhon Doe. All rights reserved.
+						© {currentYear} <span className="text-red-500">KIST</span> Embodied AGI Lab. All rights reserved.
 					</p>
 				</div>
 			</div>

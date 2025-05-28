@@ -13,8 +13,8 @@ export default function AboutPage() {
     <div className="pt-24">
       <SectionContainer>
         <PageHeader
-          title="About Me"
-          description="Learn about my journey, interests, and aspirations in the field of chemistry."
+          title="About Team"
+          description="Discover our pioneering research in embodied artificial general intelligence and human-robot interaction at KIST."
         />
 
         <AboutContent />

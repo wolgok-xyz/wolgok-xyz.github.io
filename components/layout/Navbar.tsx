@@ -9,9 +9,9 @@ import { cn } from '@/lib/utils';
 const navigationItems = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Education', href: '/education' },
+  { name: 'People', href: '/people' },
   { name: 'Projects', href: '/projects' },
-  { name: 'Certificates', href: '/certificates' },
+  { name: 'Publications', href: '/publications' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -50,7 +50,7 @@ export default function Navbar() {
               href="/"
               className="text-xl md:text-2xl font-bold text-primary"
             >
-              Jhon Doe
+              <span className="text-red-500">KIST</span> Embodied AGI Research Team
             </Link>
           </div>
 

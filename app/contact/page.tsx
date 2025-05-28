@@ -2,10 +2,10 @@ import { Metadata } from 'next';
 import SectionContainer from '@/components/common/SectionContainer';
 import PageHeader from '@/components/common/PageHeader';
 import ContactForm from '@/components/contact/ContactForm';
-import CVButton from '@/components/common/CVButton';
 import { MapPin, Mail, Phone, Linkedin, Twitter, Github } from 'lucide-react';
 import Link from 'next/link';
 import { contactInfo } from '@/lib/constants';
+import { motion } from 'framer-motion';
 
 export const metadata: Metadata = {
 	title: 'Contact | Jhon Doe',
@@ -17,7 +17,7 @@ export default function ContactPage() {
 		<div className="pt-24">
 			<SectionContainer>
 				<PageHeader
-					title="Contact Me"
+					title="Contact Team"
 					description="Have a question or want to collaborate? Feel free to reach out."
 				/>
 
@@ -95,13 +95,6 @@ export default function ContactPage() {
 									<span className="sr-only">GitHub</span>
 								</Link>
 							</div>
-						</div>
-
-						<div className="mt-10">
-							<p className="text-muted-foreground mb-4">
-								Interested in my qualifications? Download my CV for a complete overview of my academic and research background.
-							</p>
-							<CVButton variant="outline" />
 						</div>
 					</div>
 
