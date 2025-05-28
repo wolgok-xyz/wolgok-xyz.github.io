@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export', // Removed for dev server compatibility
+  output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
   },
