@@ -51,9 +51,9 @@ export default function PublicationGrid() {
         <motion.div
           key={index}
           variants={item}
-          className="flex gap-6 p-6 rounded-lg border border-border bg-card hover:shadow-lg transition-shadow"
+          className="flex flex-col md:flex-row gap-4 md:gap-6 p-4 md:p-6 rounded-lg border border-border bg-card hover:shadow-lg transition-shadow"
         >
-          <div className="w-[241px] h-[161px] flex-shrink-0 relative rounded-lg overflow-hidden">
+          <div className="w-full h-40 md:w-[241px] md:h-[161px] flex-shrink-0 relative rounded-lg overflow-hidden">
             <iframe
               src={`https://www.youtube.com/embed/${pub.videoId}`}
               title={pub.title}
@@ -62,7 +62,7 @@ export default function PublicationGrid() {
               allowFullScreen
             />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 mt-4 md:mt-0">
             <h3 className="text-xl font-semibold mb-2">{pub.title}</h3>
             <p className="text-sm text-muted-foreground mb-2">{pub.authors}</p>
             <p className="text-sm mb-2">
