@@ -47,4 +47,5 @@ jobs:
           folder: out
           branch: gh-pages
           clean: true
-          commit-message: "Deploy Next.js site to GitHub Pages" 
+          commit-message: "Deploy Next.js site to GitHub Pages"
+          single-commit: true 
