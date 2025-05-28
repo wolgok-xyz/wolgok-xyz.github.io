@@ -5,8 +5,8 @@ import ProjectCard from '@/components/projects/ProjectCard';
 import { projects } from '@/lib/constants';
 
 export const metadata: Metadata = {
-	title: 'Projects | Jhon Doe',
-	description: 'Explore the research projects and laboratory work conducted by Jhon Doe in the field of chemistry.',
+	title: 'About | KIST Embodied AGI',
+	description: 'Discover our pioneering research in embodied artificial general intelligence and human-robot interaction at KIST.',
 };
 
 export default function ProjectsPage() {

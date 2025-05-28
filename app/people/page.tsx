@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import SectionContainer from '@/components/common/SectionContainer';
 import PageHeader from '@/components/common/PageHeader';
-import PeopleTimeline from '@/components/people/PeopleTimeline';
+import PeopleCard from '@/components/people/PeopleCard';
 
 export const metadata: Metadata = {
 	title: 'People | KIST Embodied AGI Research Team',
@@ -16,7 +16,7 @@ export default function PeoplePage() {
 					title="Our Team"
 					description="Meet the researchers and scientists behind our embodied AGI research."
 				/>
-				<PeopleTimeline />
+				<PeopleCard />
 			</SectionContainer>
 		</div>
 	);
