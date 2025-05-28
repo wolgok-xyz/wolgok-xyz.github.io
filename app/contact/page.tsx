@@ -8,8 +8,8 @@ import { contactInfo } from '@/lib/constants';
 import { motion } from 'framer-motion';
 
 export const metadata: Metadata = {
-	title: 'Contact | Jhon Doe',
-	description: 'Get in touch with Jhon Doe, an M.Sc. Chemistry student from West Bengal, India, for research collaborations, academic inquiries, or professional opportunities.',
+	title: 'About | KIST Embodied AGI',
+	description: 'Discover our pioneering research in embodied artificial general intelligence and human-robot interaction at KIST.',
 };
 
 export default function ContactPage() {

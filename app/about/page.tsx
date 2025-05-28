@@ -4,8 +4,8 @@ import SectionContainer from '@/components/common/SectionContainer';
 import PageHeader from '@/components/common/PageHeader';
 
 export const metadata: Metadata = {
-  title: 'About | Jhon Doe',
-  description: 'Learn about Jhon Doe, an M.Sc. Chemistry student from West Bengal, India, her background, research interests, and professional goals.',
+  title: 'About | KIST Embodied AGI',
+  description: 'Discover our pioneering research in embodied artificial general intelligence and human-robot interaction at KIST.',
 };
 
 export default function AboutPage() {

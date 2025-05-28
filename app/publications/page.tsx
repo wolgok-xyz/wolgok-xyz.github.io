@@ -4,7 +4,7 @@ import PageHeader from '@/components/common/PageHeader';
 import PublicationGrid from '@/components/publications/PublicationGrid';
 
 export const metadata: Metadata = {
-  title: 'Publications | KIST Embodied AGI Research Team',
+  title: 'Publications | KIST Embodied AGI Research Group',
   description: 'Explore our research publications in embodied artificial general intelligence and human-robot interaction.',
 };
 

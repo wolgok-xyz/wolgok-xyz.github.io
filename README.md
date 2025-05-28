@@ -1,4 +1,4 @@
-# 🤖 KIST Embodied AGI Research Team Homepage
+# 🤖 KIST Embodied AGI Research Group Homepage
 
 <div align="center">
 
@@ -12,13 +12,13 @@
 
 ## Introduction
 
-**KIST Embodied AGI Research Team** is dedicated to advancing artificial general intelligence (AGI) through embodied learning, robotics, and human-robot interaction. Our research focuses on building intelligent agents that learn and adapt in the real world, bridging the gap between perception, cognition, and action.
+**KIST Embodied AGI Research Group** is dedicated to advancing artificial general intelligence (AGI) through embodied learning, robotics, and human-robot interaction. Our research focuses on building intelligent agents that learn and adapt in the real world, bridging the gap between perception, cognition, and action.
 
 ---
 
 ## Key Features
 
-- 🤖 **Team & Members**: Meet our researchers, scientists, and students
+- 🤖 **Members**: Meet our researchers, scientists, and students
 - 🧠 **Research & Publications**: Explore our work in embodied AI, robotics, and AGI
 - 🦾 **Projects**: Innovative projects in human-robot interaction and adaptive learning
 - 📰 **News & Events**: Seminars, workshops, and lab updates
@@ -77,5 +77,5 @@ Pull Requests and Issues are welcome! If you are passionate about AGI, robotics,
 ---
 
 <div align="center">
-  <sub>This homepage is maintained by the KIST Embodied AGI Research Team.</sub>
+  <sub>This homepage is maintained by the KIST Embodied AGI Research Group.</sub>
 </div>

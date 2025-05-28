@@ -9,7 +9,7 @@ const peopleData = [
   {
     id: 1,
     degree: 'Principal Investigator',
-    institution: 'KIST Embodied AGI Research Lab',
+    institution: 'KIST Embodied AGI Research Group',
     location: 'Seoul, South Korea',
     period: '2020 - Present',
     description: 'Leading research in embodied AI and human-robot interaction. Specializing in multi-modal learning and physical interaction for AGI development.',
@@ -23,21 +23,21 @@ const peopleData = [
   {
     id: 2,
     degree: 'Senior Research Scientist',
-    institution: 'KIST Embodied AGI Research Lab',
+    institution: 'KIST Embodied AGI Research Group',
     location: 'Seoul, South Korea',
     period: '2021 - Present',
     description: 'Expert in reinforcement learning and robotic control systems. Currently focusing on developing adaptive learning algorithms for embodied agents.',
     achievements: [
       'Developed novel reinforcement learning algorithms',
       'Multiple patents in robotic control systems',
-      'Best paper award at ICRA 2022'
+      'Best paper award at **** 2022'
     ],
     image: 'https://picsum.photos/400/600?random=2'
   },
   {
     id: 3,
     degree: 'Research Scientist',
-    institution: 'KIST Embodied AGI Research Lab',
+    institution: 'KIST Embodied AGI Research Group',
     location: 'Seoul, South Korea',
     period: '2022 - Present',
     description: 'Specializing in computer vision and sensor fusion for robotic perception. Working on integrating visual and tactile feedback for improved robot learning.',
@@ -51,7 +51,7 @@ const peopleData = [
   {
     id: 4,
     degree: 'Research Scientist',
-    institution: 'KIST Embodied AGI Research Lab',
+    institution: 'KIST Embodied AGI Research Group',
     location: 'Seoul, South Korea',
     period: '2022 - Present',
     description: 'Focusing on natural language processing and human-robot communication. Developing methods for robots to understand and respond to human instructions.',
@@ -65,7 +65,7 @@ const peopleData = [
   {
     id: 5,
     degree: 'Postdoctoral Researcher',
-    institution: 'KIST Embodied AGI Research Lab',
+    institution: 'KIST Embodied AGI Research Group',
     location: 'Seoul, South Korea',
     period: '2023 - Present',
     description: 'Working on cognitive architectures for embodied AI systems. Research interests include memory systems and decision-making in physical environments.',

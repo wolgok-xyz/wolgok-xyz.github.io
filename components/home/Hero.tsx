@@ -43,7 +43,7 @@ export default function Hero() {
           variants={item}
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight"
         >
-          Wolgok.<span className="text-red-500">X</span><span className="text-green-500">Y</span><span className="text-blue-500">Z</span> to Embodied AGI
+          Wolgok.<span className="text-red-500">X</span><span className="text-green-500">Y</span><span className="text-blue-500">Z</span>: Toward Embodied AGI
         </motion.h1>
         <motion.h2
           variants={item}

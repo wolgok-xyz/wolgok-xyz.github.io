@@ -11,7 +11,7 @@ import LoadingAnimation from '@/components/common/LoadingAnimation';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-	title: 'KIST Embodied AGI Research Team',
+	title: 'KIST Embodied AGI Research Group',
 	description: 'Advancing artificial general intelligence through embodied learning and human-robot interaction research.',
 	keywords: ['KIST', 'Embodied AGI', 'Research', 'Artificial Intelligence', 'Human-Robot Interaction', 'Machine Learning'],
 };

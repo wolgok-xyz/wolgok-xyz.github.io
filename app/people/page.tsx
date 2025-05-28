@@ -4,8 +4,8 @@ import PageHeader from '@/components/common/PageHeader';
 import PeopleCard from '@/components/people/PeopleCard';
 
 export const metadata: Metadata = {
-	title: 'People | KIST Embodied AGI Research Team',
-	description: 'Meet our team of researchers and scientists at KIST Embodied AGI Research Lab.',
+	title: 'People | KIST Embodied AGI Research Group',
+	description: 'Meet our team of researchers and scientists at KIST Embodied AGI Research Group.',
 };
 
 export default function PeoplePage() {

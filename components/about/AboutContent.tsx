@@ -23,7 +23,7 @@ export default function AboutContent() {
 					<div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent"></div>
 					<div className="absolute bottom-0 left-0 p-6">
 						<h3 className="text-xl font-semibold mb-2">Toward AGI Robot</h3>
-						<p className="text-muted-foreground">Embodied AGI Research Team</p>
+						<p className="text-muted-foreground">Embodied AGI Research Group</p>
 					</div>
 				</div>
 			</motion.div>
@@ -35,7 +35,7 @@ export default function AboutContent() {
 				className="space-y-6"
 			>
 				<p className="text-muted-foreground">
-					Welcome to the Embodied AGI Research Team at KIST! We are a dedicated group of researchers and engineers working at the intersection of artificial intelligence, robotics, and cognitive science. Our mission is to advance the field of embodied artificial general intelligence through innovative research and practical applications.
+					Welcome to the Embodied AGI Research Group at KIST! We are a dedicated group of researchers and engineers working at the intersection of artificial intelligence, robotics, and cognitive science. Our mission is to advance the field of embodied artificial general intelligence through innovative research and practical applications.
 				</p>
 
 				<p className="text-muted-foreground">
