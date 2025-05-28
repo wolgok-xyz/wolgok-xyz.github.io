@@ -62,7 +62,7 @@ export default function PublicationGrid() {
               allowFullScreen
             />
           </div>
-          <div className="flex-1 mt-4 md:mt-0">
+          <div className="w-full md:flex-1 mt-4 md:mt-0">
             <h3 className="text-xl font-semibold mb-2">{pub.title}</h3>
             <p className="text-sm text-muted-foreground mb-2">{pub.authors}</p>
             <p className="text-sm mb-2">
