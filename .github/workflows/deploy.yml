@@ -24,17 +24,26 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          echo "Dependencies installed successfully"
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          echo "Build completed"
+          ls -la out/
 
       - name: Create .nojekyll file
-        run: touch out/.nojekyll
+        run: |
+          touch out/.nojekyll
+          echo "Created .nojekyll file"
+          ls -la out/
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: out
           branch: gh-pages
-          clean: true 
+          clean: true
+          commit-message: "Deploy Next.js site to GitHub Pages" 
