@@ -64,14 +64,6 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href="/about"
-									className="text-sm text-muted-foreground hover:text-primary transition-colors"
-								>
-									About
-								</Link>
-							</li>
-							<li>
-								<Link
 									href="/people"
 									className="text-sm text-muted-foreground hover:text-primary transition-colors"
 								>
@@ -92,6 +84,14 @@ export default function Footer() {
 									className="text-sm text-muted-foreground hover:text-primary transition-colors"
 								>
 									Publications
+								</Link>
+							</li>
+							<li>
+								<Link
+									href="/news"
+									className="text-sm text-muted-foreground hover:text-primary transition-colors"
+								>
+									News
 								</Link>
 							</li>
 							<li>

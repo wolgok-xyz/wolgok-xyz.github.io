@@ -62,12 +62,7 @@ export default function Hero() {
           variants={item}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Link
-            href="/contact"
-            className="w-full sm:w-auto bg-secondary text-secondary-foreground hover:bg-secondary/80 px-6 py-2 rounded-md transition-colors font-medium"
-          >
-            Get in Touch
-          </Link>
+          {/* (Get in Touch button removed) */}
         </motion.div>
       </motion.div>
 

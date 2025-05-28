@@ -1,11 +1,31 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
+
+interface MousePosition {
+  x: number;
+  y: number;
+  timestamp: number;
+}
 
 export default function AnimatedBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
-  
+  const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0, timestamp: 0 });
+  const lastUpdateTime = useRef<number>(0);
+  const updateInterval = 100;
+  const currentRotation = useRef<number>(0);
+  const targetRotation = useRef<number>(0);
+  const robotPosition = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+
+  // 회전 보간을 위한 함수
+  const lerpRotation = (current: number, target: number, factor: number) => {
+    let diff = target - current;
+    while (diff > Math.PI) diff -= Math.PI * 2;
+    while (diff < -Math.PI) diff += Math.PI * 2;
+    return current + diff * factor;
+  };
+
   useEffect(() => {
     if (!containerRef.current) return;
     
@@ -61,7 +81,7 @@ export default function AnimatedBackground() {
     // Robot body (cube)
     const bodyGeometry = new THREE.BoxGeometry(0.5, 0.5, 0.5);
     const bodyMaterial = new THREE.MeshBasicMaterial({ 
-      color: 0x87ceeb, // Sky blue
+      color: 0x87ceeb,
       transparent: true,
       opacity: 0.6
     });
@@ -71,7 +91,7 @@ export default function AnimatedBackground() {
     // Robot head (sphere)
     const headGeometry = new THREE.SphereGeometry(0.3, 16, 16);
     const headMaterial = new THREE.MeshBasicMaterial({ 
-      color: 0x98fb98, // Pale green
+      color: 0x98fb98,
       transparent: true,
       opacity: 0.6
     });
@@ -82,7 +102,7 @@ export default function AnimatedBackground() {
     // Robot eyes
     const eyeGeometry = new THREE.SphereGeometry(0.05, 8, 8);
     const eyeMaterial = new THREE.MeshBasicMaterial({ 
-      color: 0xff69b4, // Hot pink
+      color: 0xff69b4,
       transparent: true,
       opacity: 0.8
     });
@@ -98,34 +118,81 @@ export default function AnimatedBackground() {
     // Position robot on the floor
     robotGroup.position.y = -1.75;
     scene.add(robotGroup);
+
+    // 마우스 움직임 추적
+    const handleMouseMove = (e: MouseEvent) => {
+      const currentTime = Date.now();
+      if (currentTime - lastUpdateTime.current < updateInterval) return;
+      
+      const x = (e.clientX / window.innerWidth) * 2 - 1;
+      const y = -(e.clientY / window.innerHeight) * 2 + 1;
+      
+      setMousePosition({
+        x: x * 4,
+        y: y * 4,
+        timestamp: currentTime
+      });
+      
+      lastUpdateTime.current = currentTime;
+    };
     
-    // Animation
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    // Animation variables
     const clock = new THREE.Clock();
-    let phase = 0; // 0: move along x, 1: move along z
+    let currentVelocity = new THREE.Vector3(0, 0, 0);
+    let randomAngle = Math.random() * Math.PI * 2;
+    let randomRadius = 1 + Math.random() * 1; // 1~2 사이의 반경
     
     const animate = () => {
       const elapsedTime = clock.getElapsedTime();
       
-      // Update phase based on time
-      phase = Math.floor(elapsedTime / 4) % 2;
+      // 마우스 주변에서 움직임
+      const targetX = mousePosition.x;
+      const targetZ = mousePosition.y;
       
-      // Move robot along different axes
-      switch (phase) {
-        case 0: // Move along x-axis
-          robotGroup.position.x = Math.sin(elapsedTime * 2) * 4;
-          robotGroup.rotation.y = Math.PI / 2;
-          break;
-        case 1: // Move along z-axis
-          robotGroup.position.z = Math.sin(elapsedTime * 2) * 4;
-          robotGroup.rotation.y = 0;
-          break;
+      // 원형 경로 계산
+      randomAngle += 0.01; // 회전 속도
+      if (randomAngle > Math.PI * 2) randomAngle = 0;
+      
+      // 주기적으로 반경 변경
+      if (Math.random() < 0.01) {
+        randomRadius = 1 + Math.random() * 1;
       }
       
-      // Add some bobbing motion
-      robotGroup.position.y = -1.75 + Math.sin(elapsedTime * 4) * 0.05;
+      // 목표 위치 계산 (마우스 주변 원형 경로)
+      const targetPosition = new THREE.Vector3(
+        targetX + Math.cos(randomAngle) * randomRadius,
+        -1.75,
+        targetZ + Math.sin(randomAngle) * randomRadius
+      );
       
-      // Rotate the robot slightly
-      robotGroup.rotation.z = Math.sin(elapsedTime) * 0.1;
+      // 현재 위치에서 목표 위치까지의 방향 계산
+      const direction = targetPosition.clone().sub(robotGroup.position);
+      const distance = direction.length();
+      
+      // 속도 업데이트 (부드러운 움직임을 위해)
+      const speed = 0.02;
+      currentVelocity.lerp(direction.normalize().multiplyScalar(speed), 0.05);
+      robotGroup.position.add(currentVelocity);
+      
+      // 회전 처리
+      if (currentVelocity.length() > 0.001) {
+        targetRotation.current = Math.atan2(currentVelocity.x, currentVelocity.z);
+        currentRotation.current = lerpRotation(
+          currentRotation.current,
+          targetRotation.current,
+          0.05
+        );
+        robotGroup.rotation.y = currentRotation.current;
+      }
+      
+      // 부드러운 움직임을 위한 보간
+      robotGroup.position.y = -1.75 + Math.sin(elapsedTime * 2) * 0.05;
+      
+      // 회전 애니메이션도 부드럽게
+      const tiltAmount = Math.sin(elapsedTime * 0.5) * 0.1;
+      robotGroup.rotation.z = lerpRotation(robotGroup.rotation.z, tiltAmount, 0.1);
       
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
@@ -148,6 +215,7 @@ export default function AnimatedBackground() {
         containerRef.current.removeChild(renderer.domElement);
       }
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('mousemove', handleMouseMove);
       
       // Dispose geometries and materials
       floorGeometry.dispose();
@@ -160,7 +228,7 @@ export default function AnimatedBackground() {
       eyeMaterial.dispose();
     };
   }, []);
-  
+
   return (
     <div 
       ref={containerRef}
