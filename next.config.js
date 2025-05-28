@@ -9,6 +9,9 @@ const nextConfig = {
     config.cache = false;
     return config;
   },
+  basePath: '',
+  assetPrefix: '',
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;

@@ -34,10 +34,11 @@ jobs:
           echo "Build completed"
           ls -la out/
 
-      - name: Create .nojekyll file
+      - name: Create .nojekyll and CNAME files
         run: |
           touch out/.nojekyll
-          echo "Created .nojekyll file"
+          echo "www.wolgok.xyz" > out/CNAME
+          echo "Created .nojekyll and CNAME files"
           ls -la out/
 
       - name: Deploy
