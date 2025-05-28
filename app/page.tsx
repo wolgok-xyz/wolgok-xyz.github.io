@@ -70,7 +70,7 @@ export default function Home() {
         
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Looking for my full credentials? Download my comprehensive CV to learn more about my academic achievements, research experience, and professional skills.
+            Want to know more about our lab? Explore our website to discover our latest research projects, meet our team members, and learn about our achievements in embodied artificial general intelligence and robotics.
           </p>
         </div>
       </SectionContainer>
