@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Briefcase } from 'lucide-react';
+import { Hammer } from 'lucide-react';
 
 export default function OpenToBadge() {
   return (
@@ -17,8 +17,8 @@ export default function OpenToBadge() {
       }}
       className="inline-flex items-center gap-2 bg-green-500/10 text-green-600 dark:text-green-400 dark:bg-green-500/20 px-4 py-2 rounded-full font-medium"
     >
-      <Briefcase size={18} className="animate-pulse" />
-      <span>Open to Work</span>
+      <Hammer size={18} className="animate-pulse" />
+      <span>Under Construction</span>
     </motion.div>
   );
 }

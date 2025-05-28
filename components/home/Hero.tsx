@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
+import OpenToBadge from './OpenToBadge';
 
 export default function Hero() {
   const container = {
@@ -37,13 +38,13 @@ export default function Hero() {
         initial="hidden"
         animate="show"
       >
+        <OpenToBadge />
         <motion.h1
           variants={item}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight whitespace-nowrap"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight"
         >
-          <span className="text-red-500">KIST</span> Embodied AGI Research Team
+          Wolgok.<span className="text-red-500">X</span><span className="text-green-500">Y</span><span className="text-blue-500">Z</span> to Embodied AGI
         </motion.h1>
-
         <motion.h2
           variants={item}
           className="text-xl md:text-2xl text-muted-foreground mb-6"

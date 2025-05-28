@@ -30,7 +30,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <div className="bg-card rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
             <h3 className="text-xl font-bold mb-4">Robotics & Embodiment</h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-6 break-words">
               We develop intelligent robots that perceive, act, and adapt in the real world, bridging the gap between AI and physical embodiment.
             </p>
             <Link 
@@ -43,7 +43,7 @@ export default function Home() {
           
           <div className="bg-card rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
             <h3 className="text-xl font-bold mb-4">Learning & Adaptation</h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-6 break-words">
               Our research focuses on machine learning algorithms that enable agents to learn from experience, adapt to new tasks, and generalize knowledge.
             </p>
             <Link 
@@ -56,7 +56,7 @@ export default function Home() {
           
           <div className="bg-card rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
             <h3 className="text-xl font-bold mb-4">Collaboration & Interaction</h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-6 break-words">
               We advance human-robot interaction and multi-agent collaboration, aiming for AGI systems that work alongside people and other agents.
             </p>
             <Link 

@@ -50,7 +50,7 @@ export default function Navbar() {
               href="/"
               className="text-xl md:text-2xl font-bold text-primary"
             >
-              <span className="text-red-500">KIST</span> Embodied AGI Research Team
+              Wolgok.<span className="text-red-500">X</span><span className="text-green-500">Y</span><span className="text-blue-500">Z</span>
             </Link>
           </div>
 

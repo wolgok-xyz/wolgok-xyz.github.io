@@ -58,7 +58,7 @@ export const projects = [
 export const news = [
 	{
 		id: 1,
-		title: "KIST AGI Team Wins Best Paper at ICRA 2024",
+		title: "KIST AGI Team Wins Best Paper at **** 2024",
 		description: "Our team received the Best Paper Award at the International Conference on Robotics and Automation for our work on vision-language-action models.",
 		date: "2024-05-20",
 		imageUrl: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80",
