@@ -8,23 +8,23 @@ import Image from 'next/image';
 const peopleData = [
   {
     id: 1,
-    degree: 'Principal Investigator',
-    institution: 'KIST Embodied AGI Research Group',
-    location: 'Seoul, South Korea',
-    period: '2020 - Present',
+    name: 'Dr. Hwasup Lim',
+    degree: 'Principal Researcher',
+    education: 'Ph.D. in Electrical Engineering, PennState Univ., 2007',
+    period: '2011 - Present',
     description: 'Leading research in embodied AI and human-robot interaction. Specializing in multi-modal learning and physical interaction for AGI development.',
     achievements: [
       'Led multiple national research projects on embodied AI',
       'Published in top-tier AI and robotics journals',
-      'Keynote speaker at international AI conferences'
+      'Tutorial speaker at international conferences'
     ],
-    image: 'https://picsum.photos/400/600?random=1'
+    image: '/images/people/hwasup.png'
   },
   {
     id: 2,
-    degree: 'Senior Research Scientist',
-    institution: 'KIST Embodied AGI Research Group',
-    location: 'Seoul, South Korea',
+    name: 'Dr. Sang Chul Ahn',
+    degree: 'Principal Researcher',
+    education: 'KIST Embodied AGI Research Group',
     period: '2021 - Present',
     description: 'Expert in reinforcement learning and robotic control systems. Currently focusing on developing adaptive learning algorithms for embodied agents.',
     achievements: [
@@ -36,9 +36,9 @@ const peopleData = [
   },
   {
     id: 3,
+    name: 'Dr. Michael Chen',
     degree: 'Research Scientist',
-    institution: 'KIST Embodied AGI Research Group',
-    location: 'Seoul, South Korea',
+    education: 'KIST Embodied AGI Research Group',
     period: '2022 - Present',
     description: 'Specializing in computer vision and sensor fusion for robotic perception. Working on integrating visual and tactile feedback for improved robot learning.',
     achievements: [
@@ -50,9 +50,9 @@ const peopleData = [
   },
   {
     id: 4,
+    name: 'Dr. Emily Park',
     degree: 'Research Scientist',
-    institution: 'KIST Embodied AGI Research Group',
-    location: 'Seoul, South Korea',
+    education: 'KIST Embodied AGI Research Group',
     period: '2022 - Present',
     description: 'Focusing on natural language processing and human-robot communication. Developing methods for robots to understand and respond to human instructions.',
     achievements: [
@@ -64,9 +64,9 @@ const peopleData = [
   },
   {
     id: 5,
+    name: 'Dr. David Kim',
     degree: 'Postdoctoral Researcher',
-    institution: 'KIST Embodied AGI Research Group',
-    location: 'Seoul, South Korea',
+    education: 'KIST Embodied AGI Research Group',
     period: '2023 - Present',
     description: 'Working on cognitive architectures for embodied AI systems. Research interests include memory systems and decision-making in physical environments.',
     achievements: [
@@ -92,7 +92,7 @@ export default function PeopleCard() {
           <div className="bg-card rounded-lg shadow-md hover:shadow-lg transition-all overflow-hidden">
             <div className="flex flex-col md:flex-row">
               {/* Image Section */}
-              <div className="w-full md:w-[23%] relative">
+              <div className="w-full md:w-[23%] relative mt-8">
                 <div className="aspect-[3/4] relative">
                   <Image
                     src={item.image}
@@ -108,12 +108,13 @@ export default function PeopleCard() {
               <div className="w-full md:w-[77%] p-6">
                 <div className="flex items-start gap-4">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2">{item.degree}</h3>
+                    <h2 className="text-3xl font-bold mb-1">{item.name}</h2>
+                    <h3 className="text-2xl font-semibold mb-2 text-primary">{item.degree}</h3>
                     
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center text-muted-foreground">
-                        <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
-                        <span>{item.institution}, {item.location}</span>
+                        <GraduationCap className="w-4 h-4 mr-2 flex-shrink-0" />
+                        <span>{item.education}</span>
                       </div>
                       <div className="flex items-center text-muted-foreground">
                         <Calendar className="w-4 h-4 mr-2 flex-shrink-0" />
