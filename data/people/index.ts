@@ -23,8 +23,7 @@ export const peopleData: Person[] = [
     ],
     achievements: [
       'Led multiple national research projects on embodied AI',
-      'Technology transfer to major companies including Samsung, LG, and others',
-      'Tutorial speaker at international conferences'
+      'Technology transfer to Samsung, LG, and others'
     ],
     image: '/images/people/hwasup.png',
     homepage: 'https://www.xrhumanlab.net'
@@ -45,8 +44,8 @@ export const peopleData: Person[] = [
   },
   {
     id: 3,
-    name: 'Dr. Micha Kim',
-    degree: 'Senior Research Scientist',
+    name: 'Dr. Soonkyum Kim',
+    degree: 'Principal Researcher',
     education: 'KIST Embodied AGI Research Group',
     research: 'Deep reinforcement learning for robotic manipulation and grasping. Focus on sample-efficient learning algorithms.',
     work: ['KIST Embodied AGI Research Group, 2019 - Present'],
@@ -59,8 +58,8 @@ export const peopleData: Person[] = [
   },
   {
     id: 4,
-    name: '이준호',
-    degree: 'Senior Research Scientist',
+    name: 'Dr. Sehyuk Yim',
+    degree: 'Principal Researcher',
     education: 'KIST Embodied AGI Research Group',
     research: 'Computer vision and object detection for embodied AI systems. Specializing in real-time visual perception.',
     work: ['KIST Embodied AGI Research Group, 2022 - Present'],
@@ -73,8 +72,8 @@ export const peopleData: Person[] = [
   },
   {
     id: 5,
-    name: '박서연',
-    degree: 'Researcher',
+    name: 'Dr. Jeongryul Kim',
+    degree: 'Senior Researcher',
     education: 'KIST Embodied AGI Research Group',
     research: 'Natural language processing for human-robot communication. Development of conversational AI systems.',
     work: ['KIST Embodied AGI Research Group, 2023 - Present'],
@@ -87,8 +86,8 @@ export const peopleData: Person[] = [
   },
   {
     id: 6,
-    name: '김민수',
-    degree: 'Senior Research Scientist',
+    name: 'Dr. Soomin Kim',
+    degree: 'Senior Researcher',
     education: 'KIST Embodied AGI Research Group',
     research: 'Specializing in multi-modal learning and human-robot interaction. Research focuses on developing intuitive interfaces for embodied AI systems.',
     work: ['KIST Embodied AGI Research Group, 2021 - Present'],
@@ -101,8 +100,8 @@ export const peopleData: Person[] = [
   },
   {
     id: 7,
-    name: '정하늘',
-    degree: 'Research Scientist',
+    name: 'Dr. Tackgeun You',
+    degree: 'Researcher',
     education: 'KIST Embodied AGI Research Group',
     research: 'Working on cognitive architectures for embodied AI and developing bio-inspired learning algorithms for autonomous systems.',
     work: ['KIST Embodied AGI Research Group, 2022 - Present'],

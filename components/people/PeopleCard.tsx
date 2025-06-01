@@ -23,33 +23,35 @@ function PeopleCard({ item, index }: PeopleCardProps) {
       <div className="p-6">
         <div className="flex flex-col md:flex-row gap-6">
           {/* Image Section */}
-          <div className="md:w-1/3 flex-shrink-0">
-            <div className="relative w-full h-80 md:h-96 rounded-lg overflow-hidden">
+          <div className="md:w-1/4 flex-shrink-0">
+            <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden">
               <Image
                 src={item.image}
                 alt={item.name}
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 100vw, 25vw"
               />
             </div>
             
             {/* Homepage Link */}
             {item.homepage && (
-              <Link
-                href={item.homepage}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center mt-3 text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Globe className="w-4 h-4 mr-2 flex-shrink-0" />
-                www.xrhumanlab.net
-              </Link>
+              <div className="flex justify-center mt-3">
+                <Link
+                  href={item.homepage}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Globe className="w-4 h-4 mr-2 flex-shrink-0" />
+                  www.xrhumanlab.net
+                </Link>
+              </div>
             )}
           </div>
 
           {/* Content Section */}
-          <div className="md:w-2/3 space-y-4">
+          <div className="md:w-3/4 space-y-4">
             <div>
               <h3 className="text-2xl font-bold text-primary mb-1">{item.name}</h3>
               <p className="text-lg text-muted-foreground">{item.degree}</p>

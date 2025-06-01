@@ -53,7 +53,10 @@ export default function AboutContent() {
 					</div>
 					<div className="flex flex-col items-center bg-card p-4 rounded-lg shadow-sm">
 						<Bot className="h-10 w-10 text-chart-3 mb-2" />
-						<h3 className="font-medium">Autonomous Navigation & Manipulation</h3>
+						<h3 className="font-medium text-center">
+							Autonomous<br />
+							Navigation & Manipulation
+						</h3>
 					</div>
 					<div className="flex flex-col items-center bg-card p-4 rounded-lg shadow-sm">
 						<Users className="h-10 w-10 text-chart-4 mb-2" />
