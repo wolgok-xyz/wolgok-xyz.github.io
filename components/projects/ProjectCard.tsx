@@ -5,26 +5,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ExternalLink, Calendar, Users } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { projectsData, type Project } from '@/data/projects';
 
 interface ProjectCardProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-  date: string;
-  collaborators: string[];
-  link?: string;
+  project: Project;
   index: number;
 }
 
-export default function ProjectCard({
-  title,
-  description,
-  imageUrl,
-  date,
-  collaborators,
-  link,
-  index,
-}: ProjectCardProps) {
+function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -35,8 +23,8 @@ export default function ProjectCard({
     >
       <div className="relative h-48 overflow-hidden">
         <Image
-          src={imageUrl}
-          alt={title}
+          src={project.imageUrl}
+          alt={project.title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
@@ -45,27 +33,27 @@ export default function ProjectCard({
       <div className="p-6">
         <div className="mb-4">
           <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-            {title}
+            {project.title}
           </h3>
           
           <div className="flex flex-wrap gap-2 text-xs text-muted-foreground mb-3">
             <div className="flex items-center">
               <Calendar className="h-3 w-3 mr-1" />
-              <span>{date}</span>
+              <span>{project.date}</span>
             </div>
             
             <div className="flex items-center">
               <Users className="h-3 w-3 mr-1" />
-              <span>{collaborators.join(', ')}</span>
+              <span>{project.collaborators.join(', ')}</span>
             </div>
           </div>
           
-          <p className="text-muted-foreground">{description}</p>
+          <p className="text-muted-foreground">{project.description}</p>
         </div>
         
-        {link && (
+        {project.link && (
           <Link 
-            href={link} 
+            href={project.link} 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
@@ -76,5 +64,19 @@ export default function ProjectCard({
         )}
       </div>
     </motion.div>
+  );
+}
+
+export default function ProjectCards() {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {projectsData.map((project, index) => (
+        <ProjectCard
+          key={project.id}
+          project={project}
+          index={index}
+        />
+      ))}
+    </div>
   );
 }

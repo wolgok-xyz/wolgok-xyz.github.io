@@ -1,146 +1,115 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { GraduationCap, Calendar, MapPin, Award, Briefcase } from 'lucide-react';
-import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import Link from 'next/link';
+import { GraduationCap, Lightbulb, Building, Trophy, Globe } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { peopleData, type Person } from '@/data/people';
 
-const peopleData = [
-  {
-    id: 1,
-    name: 'Dr. Hwasup Lim',
-    degree: 'Principal Researcher',
-    education: 'Ph.D. in Electrical Engineering, PennState Univ., 2007',
-    period: '2011 - Present',
-    description: 'Leading research in embodied AI and human-robot interaction. Specializing in multi-modal learning and physical interaction for AGI development.',
-    achievements: [
-      'Led multiple national research projects on embodied AI',
-      'Published in top-tier AI and robotics journals',
-      'Tutorial speaker at international conferences'
-    ],
-    image: '/images/people/hwasup.png'
-  },
-  {
-    id: 2,
-    name: 'Dr. Sang Chul Ahn',
-    degree: 'Principal Researcher',
-    education: 'KIST Embodied AGI Research Group',
-    period: '2021 - Present',
-    description: 'Expert in reinforcement learning and robotic control systems. Currently focusing on developing adaptive learning algorithms for embodied agents.',
-    achievements: [
-      'Developed novel reinforcement learning algorithms',
-      'Multiple patents in robotic control systems',
-      'Best paper award at **** 2022'
-    ],
-    image: 'https://picsum.photos/400/600?random=2'
-  },
-  {
-    id: 3,
-    name: 'Dr. Michael Chen',
-    degree: 'Research Scientist',
-    education: 'KIST Embodied AGI Research Group',
-    period: '2022 - Present',
-    description: 'Specializing in computer vision and sensor fusion for robotic perception. Working on integrating visual and tactile feedback for improved robot learning.',
-    achievements: [
-      'Innovative work in multi-modal sensor fusion',
-      'Published in top computer vision conferences',
-      'Developed novel perception algorithms'
-    ],
-    image: 'https://picsum.photos/400/600?random=3'
-  },
-  {
-    id: 4,
-    name: 'Dr. Emily Park',
-    degree: 'Research Scientist',
-    education: 'KIST Embodied AGI Research Group',
-    period: '2022 - Present',
-    description: 'Focusing on natural language processing and human-robot communication. Developing methods for robots to understand and respond to human instructions.',
-    achievements: [
-      'Advanced work in human-robot dialogue systems',
-      'Published in ACL and EMNLP',
-      'Developed novel NLP architectures'
-    ],
-    image: 'https://picsum.photos/400/600?random=4'
-  },
-  {
-    id: 5,
-    name: 'Dr. David Kim',
-    degree: 'Postdoctoral Researcher',
-    education: 'KIST Embodied AGI Research Group',
-    period: '2023 - Present',
-    description: 'Working on cognitive architectures for embodied AI systems. Research interests include memory systems and decision-making in physical environments.',
-    achievements: [
-      'Novel contributions to cognitive architectures',
-      'Published in top AI journals',
-      'Developing new memory systems for robots'
-    ],
-    image: 'https://picsum.photos/400/600?random=5'
-  }
-];
+interface PeopleCardProps {
+  item: Person;
+  index: number;
+}
 
-export default function PeopleCard() {
+function PeopleCard({ item, index }: PeopleCardProps) {
   return (
-    <div className="max-w-5xl mx-auto">
-      {peopleData.map((item, index) => (
-        <motion.div
-          key={item.id}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.2 }}
-          className="mb-12 last:mb-0"
-        >
-          <div className="bg-card rounded-lg shadow-md hover:shadow-lg transition-all overflow-hidden">
-            <div className="flex flex-col md:flex-row">
-              {/* Image Section */}
-              <div className="w-full md:w-[23%] relative mt-8">
-                <div className="aspect-[3/4] relative">
-                  <Image
-                    src={item.image}
-                    alt={item.degree}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 23vw"
-                  />
-                </div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className="bg-card rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+    >
+      <div className="p-6">
+        <div className="flex flex-col md:flex-row gap-6">
+          {/* Image Section */}
+          <div className="md:w-1/3 flex-shrink-0">
+            <div className="relative w-full h-80 md:h-96 rounded-lg overflow-hidden">
+              <Image
+                src={item.image}
+                alt={item.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </div>
+            
+            {/* Homepage Link */}
+            {item.homepage && (
+              <Link
+                href={item.homepage}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center mt-3 text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                <Globe className="w-4 h-4 mr-2 flex-shrink-0" />
+                www.xrhumanlab.net
+              </Link>
+            )}
+          </div>
+
+          {/* Content Section */}
+          <div className="md:w-2/3 space-y-4">
+            <div>
+              <h3 className="text-2xl font-bold text-primary mb-1">{item.name}</h3>
+              <p className="text-lg text-muted-foreground">{item.degree}</p>
+            </div>
+
+            <div className="space-y-4">
+              {/* Education */}
+              <div className="flex items-start">
+                <GraduationCap className="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                <span className="text-muted-foreground">{item.education}</span>
               </div>
+
+              {/* Research */}
+              <div className="flex items-start">
+                <Lightbulb className="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                <span className="text-muted-foreground">{item.research}</span>
+              </div>
+
+              {/* Work Experience */}
+              {item.work && item.work.length > 0 && (
+                <div className="mb-4">
+                  <h4 className="font-medium text-muted-foreground mb-2 flex items-center">
+                    <Building className="w-4 h-4 mr-2 flex-shrink-0" />
+                    Work Experience
+                  </h4>
+                  <ul className="space-y-1 list-disc list-inside ml-1 text-muted-foreground">
+                    {item.work.map((workItem, i) => (
+                      <li key={i}>{workItem}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               
-              {/* Content Section */}
-              <div className="w-full md:w-[77%] p-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex-1">
-                    <h2 className="text-3xl font-bold mb-1">{item.name}</h2>
-                    <h3 className="text-2xl font-semibold mb-2 text-primary">{item.degree}</h3>
-                    
-                    <div className="space-y-2 mb-4">
-                      <div className="flex items-center text-muted-foreground">
-                        <GraduationCap className="w-4 h-4 mr-2 flex-shrink-0" />
-                        <span>{item.education}</span>
-                      </div>
-                      <div className="flex items-center text-muted-foreground">
-                        <Calendar className="w-4 h-4 mr-2 flex-shrink-0" />
-                        <span>{item.period}</span>
-                      </div>
-                    </div>
-                    
-                    <p className="text-muted-foreground mb-4">{item.description}</p>
-                    
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2 flex items-center">
-                        <Award className="w-4 h-4 mr-2 flex-shrink-0" />
-                        Achievements
-                      </h4>
-                      <ul className="space-y-1 list-disc list-inside ml-1 text-muted-foreground">
-                        {item.achievements.map((achievement, i) => (
-                          <li key={i}>{achievement}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+              {/* Achievements */}
+              {item.achievements && item.achievements.length > 0 && (
+                <div>
+                  <h4 className="font-medium text-muted-foreground mb-2 flex items-center">
+                    <Trophy className="w-4 h-4 mr-2 flex-shrink-0" />
+                    Achievements
+                  </h4>
+                  <ul className="space-y-1 list-disc list-inside ml-1 text-muted-foreground">
+                    {item.achievements.map((achievement, i) => (
+                      <li key={i}>{achievement}</li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
+              )}
             </div>
           </div>
-        </motion.div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+export default function PeopleCards() {
+  return (
+    <div className="space-y-8">
+      {peopleData.map((item, index) => (
+        <PeopleCard key={item.id} item={item} index={index} />
       ))}
     </div>
   );

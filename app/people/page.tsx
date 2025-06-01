@@ -13,8 +13,8 @@ export default function PeoplePage() {
 		<div className="pt-24">
 			<SectionContainer>
 				<PageHeader
-					title="Our Group"
-					description="Meet the researchers and scientists behind our embodied AGI research."
+					title="People"
+					description="Meet the brilliant minds shaping the future of embodied artificial intelligence."
 				/>
 				<PeopleCard />
 			</SectionContainer>
