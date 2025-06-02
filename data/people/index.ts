@@ -25,7 +25,7 @@ export const peopleData: Person[] = [
       'Led multiple national research projects on embodied AI',
       'Technology transfer to Samsung, LG, and others'
     ],
-    image: '/images/people/hwasup.png',
+    image: '/media/images/people/lim.png',
     homepage: 'https://www.xrhumanlab.net'
   },
   {
@@ -37,10 +37,9 @@ export const peopleData: Person[] = [
     work: ['KIST Embodied AGI Research Group, 2020 - Present'],
     achievements: [
       'Advanced SLAM algorithm development',
-      'Published in top robotics journals',
       'Led autonomous navigation projects'
     ],
-    image: 'https://picsum.photos/400/600?random=2'
+    image: '/media/images/people/ahn.png'
   },
   {
     id: 3,
@@ -51,7 +50,6 @@ export const peopleData: Person[] = [
     work: ['KIST Embodied AGI Research Group, 2019 - Present'],
     achievements: [
       'Breakthrough in robotic grasping algorithms',
-      'International collaboration projects',
       'Award-winning research publications'
     ],
     image: 'https://picsum.photos/400/600?random=3'
@@ -65,10 +63,9 @@ export const peopleData: Person[] = [
     work: ['KIST Embodied AGI Research Group, 2022 - Present'],
     achievements: [
       'Real-time vision system development',
-      'Enhanced object detection accuracy',
       'Industry partnerships in AI vision'
     ],
-    image: 'https://picsum.photos/400/600?random=4'
+    image: '/media/images/people/yim.png'
   },
   {
     id: 5,
@@ -79,7 +76,6 @@ export const peopleData: Person[] = [
     work: ['KIST Embodied AGI Research Group, 2023 - Present'],
     achievements: [
       'Advanced NLP for robotics',
-      'Human-robot dialogue systems',
       'Published research on conversational AI'
     ],
     image: 'https://picsum.photos/400/600?random=5'
@@ -93,7 +89,6 @@ export const peopleData: Person[] = [
     work: ['KIST Embodied AGI Research Group, 2021 - Present'],
     achievements: [
       'Pioneer in multi-modal human-robot interfaces',
-      'Published in top HRI conferences',
       'Developed innovative interaction paradigms'
     ],
     image: 'https://picsum.photos/400/600?random=6'
@@ -107,7 +102,6 @@ export const peopleData: Person[] = [
     work: ['KIST Embodied AGI Research Group, 2022 - Present'],
     achievements: [
       'Cognitive architecture research',
-      'Bio-inspired AI algorithms',
       'Cross-disciplinary research leadership'
     ],
     image: 'https://picsum.photos/400/600?random=7'

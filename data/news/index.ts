@@ -9,27 +9,27 @@ export interface NewsItem {
 
 export const newsData: NewsItem[] = [
   {
-    id: 1,
-    title: "KIST AGI Team Wins Best Paper at **** 2024",
-    description: "Our team received the Best Paper Award at the International Conference on Robotics and Automation for our work on vision-language-action models.",
-    date: "2024-05-20",
-    imageUrl: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80",
-    link: "#"
+    id: 3,
+    title: "12 DoF Robot Hand: Low-Cost Dexterous Manipulation",
+    description: "Our team developed a $400 12-DoF robot hand using Dynamixel actuators and 3D printing. The hand can perform complex tasks like object manipulation and water pouring, with a fingertip camera in development for enhanced capabilities.",
+    date: "2024-05-10",
+    imageUrl: "https://img.youtube.com/vi/UTsNSTtkAQs/maxresdefault.jpg",
+    link: "https://youtu.be/UTsNSTtkAQs"
   },
   {
     id: 2,
-    title: "New Grant for Human-Robot Interaction Research",
-    description: "KIST Embodied AGI Lab has been awarded a major grant to advance research in social intelligence and human-robot collaboration.",
-    date: "2024-04-10",
-    imageUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
-    link: "#"
+    title: "Dr. Yim's Interview: Music Robots Research",
+    description: "Dr. Yim discusses our research on music robots, featuring a drumming humanoid and singing robot Rea. The project aims to develop robots that can analyze and replicate human musical techniques, with the goal of preserving and recreating musical performances for cultural heritage.",
+    date: "2024-05-15",
+    imageUrl: "https://img.youtube.com/vi/XVlwNMHstOQ/maxresdefault.jpg",
+    link: "https://youtu.be/XVlwNMHstOQ"
   },
   {
-    id: 3,
-    title: "Workshop: Sim2Real Transfer in Robotics",
-    description: "We hosted a successful workshop on sim-to-real transfer techniques, featuring speakers from academia and industry.",
-    date: "2024-03-15",
-    imageUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
-    link: "#"
+    id: 1,
+    title: "Dr. Lim's Interview: Meta Humanoid Technology",
+    description: "YTN Science features Dr. Lim's interview on 'Meta Humanoid' technology, where XR overlays digital humans onto robots for natural interaction, aiming to bypass the uncanny valley, with Korea leading development despite challenges.",
+    date: "2024-05-20",
+    imageUrl: "https://img.youtube.com/vi/-kzVOZqOuNo/maxresdefault.jpg",
+    link: "https://youtu.be/-kzVOZqOuNo"
   }
 ]; 

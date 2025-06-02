@@ -12,6 +12,15 @@ const nextConfig = {
   basePath: '',
   assetPrefix: '',
   trailingSlash: true,
+  // Copy media directory to out directory
+  async rewrites() {
+    return [
+      {
+        source: '/media/:path*',
+        destination: '/media/:path*',
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

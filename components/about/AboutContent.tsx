@@ -45,11 +45,11 @@ export default function AboutContent() {
 				<div className="grid grid-cols-2 gap-4 my-8">
 					<div className="flex flex-col items-center bg-card p-4 rounded-lg shadow-sm">
 						<Eye className="h-10 w-10 text-chart-1 mb-2" />
-						<h3 className="font-medium">Vision-Language-Action Model</h3>
+						<h3 className="font-medium text-center">Vision-Language-Action Model</h3>
 					</div>
 					<div className="flex flex-col items-center bg-card p-4 rounded-lg shadow-sm">
 						<Globe className="h-10 w-10 text-chart-2 mb-2" />
-						<h3 className="font-medium">World Foundation Model</h3>
+						<h3 className="font-medium text-center">World Foundation Model</h3>
 					</div>
 					<div className="flex flex-col items-center bg-card p-4 rounded-lg shadow-sm">
 						<Bot className="h-10 w-10 text-chart-3 mb-2" />
@@ -60,7 +60,7 @@ export default function AboutContent() {
 					</div>
 					<div className="flex flex-col items-center bg-card p-4 rounded-lg shadow-sm">
 						<Users className="h-10 w-10 text-chart-4 mb-2" />
-						<h3 className="font-medium">Human-Robot Interaction</h3>
+						<h3 className="font-medium text-center">Human-Robot Interaction</h3>
 					</div>
 				</div>
 
