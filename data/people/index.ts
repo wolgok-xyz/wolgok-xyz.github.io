@@ -25,7 +25,7 @@ export const peopleData: Person[] = [
       'Led multiple national research projects on embodied AI',
       'Technology transfer to Samsung, LG, and others'
     ],
-    image: '/media/images/people/lim.png',
+    image: '/images/people/lim.png',
     homepage: 'https://www.xrhumanlab.net'
   },
   {
@@ -39,7 +39,7 @@ export const peopleData: Person[] = [
       'Advanced SLAM algorithm development',
       'Led autonomous navigation projects'
     ],
-    image: '/media/images/people/ahn.png'
+    image: '/images/people/ahn.png'
   },
   {
     id: 3,
@@ -65,7 +65,7 @@ export const peopleData: Person[] = [
       'Real-time vision system development',
       'Industry partnerships in AI vision'
     ],
-    image: '/media/images/people/yim.png'
+    image: '/images/people/yim.png'
   },
   {
     id: 5,
