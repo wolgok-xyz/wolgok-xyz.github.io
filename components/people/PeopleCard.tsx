@@ -20,17 +20,17 @@ function PeopleCard({ item, index }: PeopleCardProps) {
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="bg-card rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
     >
-      <div className="p-6">
-        <div className="flex flex-col md:flex-row gap-6">
+      <div className="p-4">
+        <div className="flex flex-col md:flex-row gap-4">
           {/* Image Section */}
-          <div className="md:w-1/4 flex-shrink-0">
-            <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden">
+          <div className="md:w-[22%] flex-shrink-0">
+            <div className="relative w-full h-60 md:h-72 rounded-lg overflow-hidden">
               <Image
                 src={item.image}
                 alt={item.name}
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 25vw"
+                sizes="(max-width: 768px) 100vw, 22vw"
               />
             </div>
             
@@ -44,20 +44,20 @@ function PeopleCard({ item, index }: PeopleCardProps) {
                   className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Globe className="w-4 h-4 mr-2 flex-shrink-0" />
-                  www.xrhumanlab.net
+                  {item.homepage.replace(/^https?:\/\//, '')}
                 </Link>
               </div>
             )}
           </div>
 
           {/* Content Section */}
-          <div className="md:w-3/4 space-y-4">
+          <div className="md:w-[78%] space-y-2">
             <div>
               <h3 className="text-2xl font-bold text-primary mb-1">{item.name}</h3>
               <p className="text-lg text-muted-foreground">{item.degree}</p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-2">
               {/* Education */}
               <div className="flex items-start">
                 <GraduationCap className="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0" />
