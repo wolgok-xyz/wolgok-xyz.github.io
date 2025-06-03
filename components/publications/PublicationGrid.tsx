@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { publicationsData, type Publication } from '@/data/publications';
-import { Users, BookOpen, FileText } from 'lucide-react';
+import { Users, BookOpen, FileText, ExternalLink, Youtube } from 'lucide-react';
 
 const container = {
   hidden: { opacity: 0 },
@@ -51,11 +51,31 @@ function PublicationItem({ publication, index }: PublicationItemProps) {
           <span className="font-medium">{publication.journal}</span>
           <span>({publication.year})</span>
         </div>
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-          <FileText className="h-4 w-4" />
-          <a href={publication.doi} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-            DOI: {publication.doi}
-          </a>
+        <div className="flex flex-wrap gap-2 text-sm text-muted-foreground">
+          {publication.doi && (
+            <a
+              href={publication.doi}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 hover:text-primary transition-colors"
+            >
+              <FileText className="h-4 w-4" />
+              <span>arXiv</span>
+              <ExternalLink className="h-3 w-3" />
+            </a>
+          )}
+          {publication.videoId && (
+            <a
+              href={`https://youtu.be/${publication.videoId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 hover:text-primary transition-colors"
+            >
+              <Youtube className="h-4 w-4" />
+              <span>YouTube</span>
+              <ExternalLink className="h-3 w-3" />
+            </a>
+          )}
         </div>
         <p className="text-sm">{publication.abstract}</p>
       </div>

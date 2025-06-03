@@ -20,14 +20,14 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true, margin: '-100px' }}
-        className="mb-8 mt-4"
+        className="mb-8 mt-4 text-center"
       >
-        <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
+        <h1 className="text-4xl font-bold mb-4 mx-[15%]">{project.title}</h1>
         <p className="text-xl text-gray-600">{project.description}</p>
       </motion.div>
 
       {/* Project Info Row */}
-      <div className="grid grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         {[
           {
             icon: <Calendar className="w-6 h-6 text-primary" />,
@@ -59,9 +59,9 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
             className="flex items-center gap-3 p-4 bg-white rounded-lg border border-gray-200"
           >
             {item.icon}
-            <div>
+            <div className="min-w-0">
               <p className="text-sm text-gray-500">{item.label}</p>
-              <p className="font-medium">{item.value}</p>
+              <p className="font-medium truncate">{item.value}</p>
             </div>
           </motion.div>
         ))}
