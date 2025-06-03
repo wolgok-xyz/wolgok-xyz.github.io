@@ -1,6 +1,9 @@
+'use client';
+
 import { Project } from '@/data/projects/types';
 import Image from 'next/image';
-import { Card } from '@/components/ui/card';
+import { Calendar, Users, Building2, Wallet } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface ProjectDetailProps {
   project: Project;
@@ -12,52 +15,85 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
   return (
     <div>
       {/* Header Section */}
-      <div className="mb-8 mt-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true, margin: '-100px' }}
+        className="mb-8 mt-4"
+      >
         <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
         <p className="text-xl text-gray-600">{project.description}</p>
-      </div>
+      </motion.div>
 
-      {/* Project Info Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        <Card className="p-4">
-          <h3 className="font-semibold mb-2">과제기간</h3>
-          <p className="text-gray-600">{project.details.period}</p>
-        </Card>
-        <Card className="p-4">
-          <h3 className="font-semibold mb-2">참여기관</h3>
-          <ul className="text-gray-600">
-            {project.details.organizations.map((org, index) => (
-              <li key={index}>{org}</li>
-            ))}
-          </ul>
-        </Card>
-        <Card className="p-4">
-          <h3 className="font-semibold mb-2">과제금액</h3>
-          <p className="text-gray-600">{project.details.budget}</p>
-        </Card>
-        <Card className="p-4">
-          <h3 className="font-semibold mb-2">주관기관</h3>
-          <p className="text-gray-600">{project.institute}</p>
-        </Card>
+      {/* Project Info Row */}
+      <div className="grid grid-cols-4 gap-4 mb-8">
+        {[
+          {
+            icon: <Calendar className="w-6 h-6 text-primary" />,
+            label: 'Project Period',
+            value: project.period,
+          },
+          {
+            icon: <Users className="w-6 h-6 text-primary" />,
+            label: 'Participating Organizations',
+            value: project.organizations.join(', '),
+          },
+          {
+            icon: <Wallet className="w-6 h-6 text-primary" />,
+            label: 'Project Budget',
+            value: project.details.budget,
+          },
+          {
+            icon: <Building2 className="w-6 h-6 text-primary" />,
+            label: 'Managing Agency',
+            value: project.agency,
+          },
+        ].map((item, idx) => (
+          <motion.div
+            key={item.label}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: idx * 0.1 }}
+            viewport={{ once: true, margin: '-100px' }}
+            className="flex items-center gap-3 p-4 bg-white rounded-lg border border-gray-200"
+          >
+            {item.icon}
+            <div>
+              <p className="text-sm text-gray-500">{item.label}</p>
+              <p className="font-medium">{item.value}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
 
       {/* Content Sections */}
       <div className="space-y-8">
         {project.details.content.map((content, index) => (
-          <Card key={index} className="p-6">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.1 }}
+            viewport={{ once: true, margin: '-100px' }}
+            className="p-6 bg-white rounded-lg border border-gray-200"
+          >
             <h2 className="text-2xl font-semibold mb-4">{content.title}</h2>
             {content.imageUrl && (
-              <div className="relative w-full h-64 mb-4">
+              <div className="w-[70%] mx-auto mb-4">
                 <Image
                   src={content.imageUrl}
                   alt={content.title}
-                  fill
-                  className="object-cover rounded-lg"
+                  width={0}
+                  height={0}
+                  sizes="70vw"
+                  className="w-full h-auto rounded-lg"
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
             )}
             <p className="text-gray-600 whitespace-pre-line">{content.description}</p>
-          </Card>
+          </motion.div>
         ))}
       </div>
     </div>

@@ -3,17 +3,15 @@ export interface Project {
   title: string;
   description: string;
   imageUrl: string;
-  date: string;
-  collaborators: string[];
-  link?: string;
-  institute: string;
-  details?: ProjectDetails;
+  agency: string;
+  period: string;
+  organizations: string[];
+  link: string;
+  details: ProjectDetails;
 }
 
 export interface ProjectDetails {
-  period: string;
   budget: string;
-  organizations: string[];
   content: ProjectContent[];
 }
 

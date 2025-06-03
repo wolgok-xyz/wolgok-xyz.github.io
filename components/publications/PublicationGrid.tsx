@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { publicationsData, type Publication } from '@/data/publications';
+import { Users, BookOpen, FileText } from 'lucide-react';
 
 const container = {
   hidden: { opacity: 0 },
@@ -41,11 +42,21 @@ function PublicationItem({ publication, index }: PublicationItemProps) {
       </div>
       <div className="w-full md:flex-1 mt-4 md:mt-0">
         <h3 className="text-xl font-semibold mb-2">{publication.title}</h3>
-        <p className="text-sm text-muted-foreground mb-2">{publication.authors}</p>
-        <p className="text-sm mb-2">
-          <span className="font-medium">{publication.journal}</span> ({publication.year})
-        </p>
-        <p className="text-sm text-muted-foreground mb-2">DOI: {publication.doi}</p>
+        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+          <Users className="h-4 w-4" />
+          <span>{publication.authors}</span>
+        </div>
+        <div className="flex items-center gap-2 text-sm mb-2">
+          <BookOpen className="h-4 w-4" />
+          <span className="font-medium">{publication.journal}</span>
+          <span>({publication.year})</span>
+        </div>
+        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+          <FileText className="h-4 w-4" />
+          <a href={publication.doi} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+            DOI: {publication.doi}
+          </a>
+        </div>
         <p className="text-sm">{publication.abstract}</p>
       </div>
     </motion.div>

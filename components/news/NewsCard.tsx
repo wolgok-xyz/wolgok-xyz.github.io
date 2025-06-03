@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Calendar } from 'lucide-react';
 import { newsData, type NewsItem } from '@/data/news';
 
 interface NewsCardProps {
@@ -33,7 +34,8 @@ function NewsCard({ newsItem, index }: NewsCardProps) {
             {newsItem.title}
           </h3>
           <div className="flex flex-wrap gap-2 text-xs text-muted-foreground mb-3">
-            <div className="flex items-center">
+            <div className="flex items-center gap-1">
+              <Calendar className="h-3 w-3" />
               <span>{newsItem.date}</span>
             </div>
           </div>

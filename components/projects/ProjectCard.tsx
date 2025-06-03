@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ExternalLink, Calendar, Users } from 'lucide-react';
+import { ExternalLink, Calendar, Users, Building2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { projectsData, type Project } from '@/data/projects';
 
@@ -21,12 +21,12 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       viewport={{ once: true, margin: "-100px" }}
       className="group overflow-hidden rounded-lg border bg-card shadow-sm hover:shadow-md transition-shadow"
     >
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-48 overflow-hidden bg-white">
         <Image
           src={project.imageUrl}
           alt={project.title}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-contain transition-transform duration-500 group-hover:scale-105"
         />
       </div>
       
@@ -38,13 +38,18 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           
           <div className="flex flex-wrap gap-2 text-xs text-muted-foreground mb-3">
             <div className="flex items-center">
+              <Building2 className="h-3 w-3 mr-1" />
+              <span>{project.agency}</span>
+            </div>
+            
+            <div className="flex items-center">
               <Calendar className="h-3 w-3 mr-1" />
-              <span>{project.date}</span>
+              <span>{project.period}</span>
             </div>
             
             <div className="flex items-center">
               <Users className="h-3 w-3 mr-1" />
-              <span>{project.collaborators.join(', ')}</span>
+              <span>{project.organizations.join(', ')}</span>
             </div>
           </div>
           
@@ -54,8 +59,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         {project.link && (
           <Link 
             href={project.link} 
-            target="_blank" 
-            rel="noopener noreferrer"
             className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
           >
             View Project Details
@@ -70,13 +73,15 @@ function ProjectCard({ project, index }: ProjectCardProps) {
 export default function ProjectCards() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {projectsData.map((project, index) => (
-        <ProjectCard
-          key={project.id}
-          project={project}
-          index={index}
-        />
-      ))}
+      {[...projectsData]
+        .sort((a, b) => b.id - a.id)
+        .map((project, index) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            index={index}
+          />
+        ))}
     </div>
   );
 }
