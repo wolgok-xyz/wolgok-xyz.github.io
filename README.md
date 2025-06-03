@@ -7,6 +7,7 @@
 [![Next.js](https://img.shields.io/badge/Next.js_15-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
 </div>
 
@@ -40,6 +41,12 @@ npm install
 
 # Start development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Serve static files
+npx serve out
 ```
 
 ---
@@ -49,16 +56,51 @@ npm run dev
 ```
 wolgok-xyz.github.io/
 ├── app/                # Next.js app router pages
-│   ├── about/          # Team introduction & vision
-│   ├── people/         # Members
-│   ├── publications/   # Papers/Research achievements
-│   ├── projects/       # Research projects
-│   ├── contact/        # Contact information
-│   └── ...             
-├── components/         # React components
-├── public/             # Static files (including oracle.png)
+│   ├── about/         # Team introduction & vision
+│   ├── people/        # Members
+│   ├── publications/  # Papers/Research achievements
+│   ├── projects/      # Research projects
+│   ├── news/         # News & events
+│   └── contact/      # Contact information
+├── components/        # React components
+│   ├── layout/       # Layout components (Navbar, Footer)
+│   ├── projects/     # Project-related components
+│   ├── publications/ # Publication-related components
+│   ├── people/       # People-related components
+│   └── news/         # News-related components
+├── data/             # Data files
+│   ├── projects/     # Project data
+│   ├── publications/ # Publication data
+│   ├── people/       # People data
+│   └── news/         # News data
+├── lib/              # Utility functions and configurations
+├── hooks/            # Custom React hooks
+├── public/           # Static files
+│   └── images/       # Image assets
 └── ...
 ```
+
+---
+
+## Technologies
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide Icons
+- **Deployment**: GitHub Pages
+
+---
+
+## Features
+
+- 🎨 Modern and responsive design
+- ⚡ Fast page loads with static generation
+- 🎭 Smooth animations and transitions
+- 📱 Mobile-first approach
+- 🔍 SEO optimized
+- 🌐 Multi-language support ready
 
 ---
 
