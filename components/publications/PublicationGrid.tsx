@@ -60,7 +60,7 @@ function PublicationItem({ publication, index }: PublicationItemProps) {
               className="inline-flex items-center gap-1 hover:text-primary transition-colors"
             >
               <FileText className="h-4 w-4" />
-              <span>arXiv</span>
+              <span>pdf</span>
               <ExternalLink className="h-3 w-3" />
             </a>
           )}
