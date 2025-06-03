@@ -1,66 +1,86 @@
-export interface Project {
-  id: number;
-  title: string;
-  description: string;
-  imageUrl: string;
-  date: string;
-  collaborators: string[];
-  link: string;
-}
+import { Project } from './types';
+export type { Project };
 
 export const projectsData: Project[] = [
   {
-    id: 6,
-    title: "Sim2Real Transfer for Embodied Agents",
-    description: "Bridging the gap between simulation and real-world deployment for embodied agents, using domain adaptation and transfer learning techniques.",
-    imageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
-    date: "2021",
-    collaborators: ["Dr. E. Kim", "KIST Sim2Real Team"],
-    link: "#"
-  },
-  {
-    id: 5,
-    title: "Multi-Agent Embodied AI Systems",
-    description: "Exploring collaborative and competitive behaviors in multi-agent embodied AI systems, focusing on communication, coordination, and emergent intelligence.",
-    imageUrl: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80",
-    date: "2022",
-    collaborators: ["Dr. Y. Choi", "KIST Multi-Agent Group"],
-    link: "#"
-  },
-  {
-    id: 4,
-    title: "Robotic Manipulation with Reinforcement Learning",
-    description: "Applying deep reinforcement learning to enable robots to perform complex manipulation tasks, such as object grasping, assembly, and tool use.",
-    imageUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
-    date: "2022",
-    collaborators: ["Dr. M. Park", "KIST AI Lab"],
-    link: "#"
-  },
-  {
-    id: 3,
-    title: "Human-Robot Interaction for Social Intelligence",
-    description: "Designing and evaluating embodied agents capable of natural and adaptive interaction with humans, including emotion recognition and social learning.",
-    imageUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
-    date: "2023",
-    collaborators: ["Dr. S. Lee", "Cognitive Science Group"],
-    link: "#"
+    id: 1,
+    title: "Embodied Artificial General Intelligence",
+    description: "Research on developing artificial general intelligence through embodied interaction with the physical world.",
+    imageUrl: "/images/projects/eagi.png",
+    date: "2023 - Present",
+    collaborators: ["KIST", "KAIST", "Seoul National University"],
+    link: "/projects/1",
+    institute: "KIST",
+    details: {
+      period: "2023.01 - 2026.12",
+      budget: "0원",
+      organizations: [
+        "한국과학기술연구원(KIST)"
+      ],
+      content: [
+        {
+          title: "연구 목표",
+          description: "본 연구는 물리적 세계와의 상호작용을 통해 인공지능의 일반화 능력을 향상시키는 것을 목표로 합니다. 이를 위해 로봇을 활용한 실험적 검증과 이론적 기반을 구축하고자 합니다.",
+          imageUrl: "/images/projects/eagi.png",
+        },
+        {
+          title: "주요 연구 내용",
+          description: "1. 물리적 상호작용을 통한 학습\n2. 일반화된 지능의 이론적 기반 구축\n3. 실험적 검증을 위한 로봇 시스템 개발\n4. 인간-로봇 상호작용 연구",
+          imageUrl: "/images/projects/eagi.png",
+        },
+        {
+          title: "기대 효과",
+          description: "본 연구를 통해 인공지능의 일반화 능력 향상과 함께, 실제 물리적 세계에서의 응용 가능성을 검증할 수 있을 것으로 기대됩니다. 또한, 인간-로봇 상호작용의 새로운 패러다임을 제시할 수 있을 것입니다."
+        }
+      ]
+    }
   },
   {
     id: 2,
-    title: "World Model Learning in Robotics",
-    description: "Researching self-supervised learning methods for robots to build internal world models, enabling prediction, planning, and adaptation in dynamic environments.",
-    imageUrl: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
-    date: "2023",
-    collaborators: ["Dr. J. Kim", "KIST Robotics"],
-    link: "#"
+    title: "Human-Robot Interaction",
+    description: "Research on natural and intuitive interaction between humans and robots.",
+    imageUrl: "/images/projects/eagi.png",
+    date: "2022 - Present",
+    collaborators: ["KIST", "POSTECH"],
+    link: "/projects/2",
+    institute: "KIST",
+    details: {
+      period: "2022.01 - 2025.12",
+      budget: "0원",
+      organizations: [
+        "한국과학기술연구원(KIST)"
+      ],
+      content: [
+        {
+          title: "연구 목표",
+          description: "인간과 로봇 간의 자연스럽고 직관적인 상호작용을 위한 새로운 패러다임을 연구합니다.",
+          imageUrl: "/images/projects/eagi.png",
+        }
+      ]
+    }
   },
   {
-    id: 1,
-    title: "Vision-Language-Action Model for Embodied AGI",
-    description: "Developing multi-modal AI models that integrate vision, language, and action for real-world robotic agents. Focus on end-to-end learning and generalization across tasks.",
-    imageUrl: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
-    date: "2024",
-    collaborators: ["Dr. H. Slim", "KIST AGI Team"],
-    link: "#"
+    id: 3,
+    title: "Robotics and Control",
+    description: "Research on advanced robotics and control systems for various applications.",
+    imageUrl: "/images/projects/eagi.png",
+    date: "2021 - Present",
+    collaborators: ["KIST", "KAIST"],
+    link: "/projects/3",
+    institute: "KIST",
+    details: {
+      period: "2021.01 - 2024.12",
+      budget: "0원",
+      organizations: [
+        "한국과학기술연구원(KIST)"
+      ],
+      content: [
+        {
+          title: "연구 목표",
+          description: "다양한 응용 분야를 위한 고급 로봇 공학 및 제어 시스템을 연구합니다.",
+          imageUrl: "/images/projects/eagi.png",
+        }
+      ]
+    }
   }
 ]; 
