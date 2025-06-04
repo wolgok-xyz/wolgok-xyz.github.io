@@ -56,7 +56,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: idx * 0.1 }}
             viewport={{ once: true, margin: '-100px' }}
-            className="flex items-center gap-3 p-4 bg-white rounded-lg border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300"
+            className="flex items-center gap-3 p-4 bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
           >
             {item.icon}
             <div className="min-w-0">
@@ -76,7 +76,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.1 }}
             viewport={{ once: true, margin: '-100px' }}
-            className="p-6 bg-white rounded-lg border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300"
+            className="p-6 bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
           >
             <h2 className="text-2xl font-semibold mb-4">{content.title}</h2>
             {content.imageUrl && (
