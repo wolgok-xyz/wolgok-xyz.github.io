@@ -121,7 +121,7 @@ export default function Footer() {
 
 				<div className="mt-8 pt-8 border-t border-muted text-center">
 					<p className="text-sm text-muted-foreground">
-						© {currentYear} <span className="text-red-500">KIST</span> Embodied AGI Lab. All rights reserved.
+						© {currentYear} <span className="text-red-500">KIST</span> Embodied AGI Research Group. All rights reserved.
 					</p>
 				</div>
 			</div>
