@@ -99,13 +99,13 @@ export const peopleData: Person[] = [
     id: 7,
     name: 'Dr. Tackgeun You',
     degree: 'Researcher',
-    education: 'KIST Embodied AGI Research Group',
-    research: 'Vision-Language-Action Model, Autonomous Navigation',
-    work: ['KIST Embodied AGI Research Group, 2022 - Present'],
+    education: 'Ph.D in Computer Science and Engineering, POSTECH, 2024',
+    research: 'Spatial Intelligence, Generative Models, Neural Architecture',
+    work: ['KIST Embodied AGI Research Group, 2022 - Present', 'Kakao Brain, 2021 - 2022'],
     achievements: [
-      'Cognitive architecture research',
-      'Cross-disciplinary research leadership'
+      'Autoregressive Generative Models'
     ],
-    image: '/images/people/you.jpg'
+    image: '/images/people/you.jpg',
+    homepage: 'https://tackgeun.github.io/'
   }
 ]; 
