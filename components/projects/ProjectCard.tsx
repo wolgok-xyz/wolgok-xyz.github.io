@@ -19,14 +19,14 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: index * 0.1 }}
       viewport={{ once: true, margin: "-100px" }}
-      className="group overflow-hidden rounded-lg border bg-card shadow-sm hover:shadow-md transition-shadow"
+      className="group overflow-hidden rounded-lg border bg-card shadow-md hover:shadow-lg transition-shadow duration-300"
     >
-      <div className="relative h-48 overflow-hidden bg-white">
+      <div className="relative h-48 overflow-hidden bg-white p-8 rounded-lg">
         <Image
           src={project.imageUrl}
           alt={project.title}
           fill
-          className="object-contain transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-500 group-hover:scale-105 rounded-lg"
         />
       </div>
       
