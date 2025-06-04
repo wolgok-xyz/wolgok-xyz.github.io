@@ -13,7 +13,7 @@ export default function NewsPage() {
     <div className="pt-24">
       <SectionContainer>
         <PageHeader
-          title="Lab News & Events"
+          title="Recent News & Events"
           description="Stay up to date with the latest news, awards, and events from our research group."
         />
         <NewsCards />

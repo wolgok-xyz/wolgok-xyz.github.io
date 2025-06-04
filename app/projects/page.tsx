@@ -13,7 +13,7 @@ export default function ProjectsPage() {
 		<div className="pt-24">
 			<SectionContainer>
 				<PageHeader
-					title="Research Projects"
+					title="Recent Research Projects"
 					description="Explore my laboratory work and research projects in the field of chemistry."
 				/>
 
