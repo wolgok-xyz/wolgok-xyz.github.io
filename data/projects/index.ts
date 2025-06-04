@@ -10,7 +10,7 @@ export const projectsData: Project[] = [
     agency: "IITP",
     period: "2025.04 - 2029.12",
     organizations: ["KIST", "Yonsei Univ", "KRM"],
-    link: "/projects/1",
+    link: "/projects/3",
     details: {
       budget: "KRW",
       content: [
@@ -68,7 +68,7 @@ export const projectsData: Project[] = [
     agency: "IITP",
     period: "2023.04 - 2025.12",
     organizations: ["KIST", "Postech", "Hanyang Univ", "Illuni"],
-    link: "/projects/3",
+    link: "/projects/1",
     details: {
       budget: "0 KRW",
       content: [
