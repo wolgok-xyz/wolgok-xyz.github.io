@@ -18,7 +18,7 @@ function PeopleCard({ item, index }: PeopleCardProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="bg-card rounded-lg border border-border shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+      className="bg-card rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
     >
       <div className="p-4">
         <div className="flex flex-col md:flex-row gap-4">

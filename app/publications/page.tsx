@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import SectionContainer from '@/components/common/SectionContainer';
 import PageHeader from '@/components/common/PageHeader';
-import PublicationGrid from '@/components/publications/PublicationGrid';
+import PublicationGrid from '@/components/publications/PublicationCard';
 
 export const metadata: Metadata = {
   title: 'Publications | KIST Embodied AGI Research Group',

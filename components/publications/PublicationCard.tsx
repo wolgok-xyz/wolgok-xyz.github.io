@@ -29,7 +29,7 @@ function PublicationItem({ publication, index }: PublicationItemProps) {
     <motion.div
       key={publication.id}
       variants={item}
-      className="flex flex-col md:flex-row gap-4 md:gap-6 p-4 rounded-lg border border-border bg-card shadow-md hover:shadow-lg transition-shadow duration-300"
+      className="flex flex-col md:flex-row gap-4 md:gap-6 p-4 rounded-lg bg-card shadow-md hover:shadow-lg transition-shadow duration-300"
     >
       <div className="w-full h-40 md:w-[241px] md:h-[161px] flex-shrink-0 relative rounded-lg overflow-hidden">
         <iframe
