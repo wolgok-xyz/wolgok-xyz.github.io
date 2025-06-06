@@ -76,7 +76,7 @@ export const peopleData: Person[] = [
     degree: 'Senior Researcher',
     education: 'Ph.D. Mechanical Engineering, Seoul National University, 2015',
     research: 'Autonomous Manipulation, Vision-Language-Action Model',
-    work: ['KIST Embodied AGI Research Group, 2021 - Present', 'Postdoctoral Researcher, KIST 2018 - 2021' 'Samsung Electronics, 2015 - 2018'],
+    work: ['KIST Embodied AGI Research Group, 2021 - Present', 'Postdoctoral Researcher, KIST 2018 - 2021', 'Samsung Electronics, 2015 - 2018'],
     achievements: [
       'Surgical Robot System',
       'Robot Gripper Development'
