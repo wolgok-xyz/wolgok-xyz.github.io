@@ -87,7 +87,7 @@ export const peopleData: Person[] = [
     id: 6,
     name: 'Dr. Soomin Kim',
     degree: 'Senior Researcher',
-    education: 'Ph.D. Computing ',
+    education: 'Ph.D. School of Computing, Korea Advanced Institute of Science and Technology, 2021',
     research: 'Vision-Language-Action Model',
     work: ['KIST Embodied AGI Research Group, 2021 - Present'],
     achievements: [
