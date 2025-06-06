@@ -32,12 +32,12 @@ export const peopleData: Person[] = [
     id: 2,
     name: 'Dr. Sang Chul Ahn',
     degree: 'Principal Researcher',
-    education: 'Ph.D. in Control and Instrumentation Engineering, SNU, 2019',
+    education: 'Ph.D. in Control and Instrumentation, Seoul National University, 1996',
     research: 'World Foundation Model',
-    work: ['KIST Embodied AGI Research Group, 2020 - Present'],
+    work: ['KIST Embodied AGI Research Group, 1997 - Present', 'Postdoctoral Researcher, University of Southern California, 1996 - 1997'],
     achievements: [
-      'Advanced SLAM algorithm development',
-      'Led autonomous navigation projects'
+      'Deep Learning-based 3D Human and Environment Modeling',
+      'UPnP based Robot Middleware'
     ],
     image: '/images/people/ahn.png',
     homepage: 'https://sites.google.com/view/asckist'
@@ -46,25 +46,26 @@ export const peopleData: Person[] = [
     id: 3,
     name: 'Dr. Soonkyum Kim',
     degree: 'Principal Researcher',
-    education: 'KIST Embodied AGI Research Group',
+    education: 'PhD. in Mechanical Engineering and Applied Mechanics, University of Pennsylvania, 2013',
     research: 'Autonomous Navigation, World Foundation Model',
-    work: ['KIST Embodied AGI Research Group, 2019 - Present'],
+    work: ['KIST Embodied AGI Research Group, 2018 - Present', 'Samsung Electronics, 2015 - 2018', 'Postdoctoral Researcher, Carnegie Mellon University, 2013 - 2015'],
     achievements: [
-      'Breakthrough in robotic grasping algorithms',
-      'Award-winning research publications'
+      'Learning-based Trajectory Generation',
+      'Omnidirectional Mobile Robot'
     ],
-    image: '/images/people/skkim.jpg'
+    image: '/images/people/skkim.jpg',
+    homepage: 'https://sites.google.com/site/kimsoonkyum'
   },
   {
     id: 4,
     name: 'Dr. Sehyuk Yim',
     degree: 'Principal Researcher',
-    education: 'KIST Embodied AGI Research Group',
+    education: 'Ph.D. Mechanical Engineering, Carnegie Mellon University, 2013',
     research: 'Human-Robot Interaction',
-    work: ['KIST Embodied AGI Research Group, 2022 - Present'],
+    work: ['KIST Embodied AGI Research Group, 2015 - Present', 'Postdoctoral Researcher, Massachusetts Institute of Technology, 2014'],
     achievements: [
-      'Real-time vision system development',
-      'Industry partnerships in AI vision'
+      'Human Interactive Physical Agent',
+      'Music AI and humanoid robot Moffett'
     ],
     image: '/images/people/yim.png',
     homepage: 'https://sites.google.com/view/meinlab'
@@ -73,12 +74,12 @@ export const peopleData: Person[] = [
     id: 5,
     name: 'Dr. Jeongryul Kim',
     degree: 'Senior Researcher',
-    education: 'KIST Embodied AGI Research Group',
+    education: 'Ph.D. Mechanical Engineering, Seoul National University, 2015',
     research: 'Autonomous Manipulation, Vision-Language-Action Model',
-    work: ['KIST Embodied AGI Research Group, 2023 - Present'],
+    work: ['KIST Embodied AGI Research Group, 2021 - Present', 'Postdoctoral Researcher, KIST 2018 - 2021' 'Samsung Electronics, 2015 - 2018'],
     achievements: [
-      'Advanced NLP for robotics',
-      'Published research on conversational AI'
+      'Surgical Robot System',
+      'Robot Gripper Development'
     ],
     image: '/images/people/jrkim.jpg'
   },
@@ -86,12 +87,12 @@ export const peopleData: Person[] = [
     id: 6,
     name: 'Dr. Soomin Kim',
     degree: 'Senior Researcher',
-    education: 'KIST Embodied AGI Research Group',
+    education: 'Ph.D. Computing ',
     research: 'Vision-Language-Action Model',
     work: ['KIST Embodied AGI Research Group, 2021 - Present'],
     achievements: [
-      'Pioneer in multi-modal human-robot interfaces',
-      'Developed innovative interaction paradigms'
+      'Image Understanding and Processing',
+      'Sentence and Language Hierarchy Understanding'
     ],
     image: '/images/people/smkim.jpg'
   },
@@ -99,13 +100,13 @@ export const peopleData: Person[] = [
     id: 7,
     name: 'Dr. Tackgeun You',
     degree: 'Researcher',
-    education: 'Ph.D in Computer Science and Engineering, POSTECH, 2024',
+    education: 'Ph.D in Computer Science and Engineering, Pohang University of Science and Technology, 2024',
     research: 'Spatial Intelligence, Generative Models, Neural Architecture',
-    work: ['KIST Embodied AGI Research Group, 2022 - Present', 'Kakao Brain, 2021 - 2022'],
+    work: ['KIST Embodied AGI Research Group, 2024 - Present', 'Kakao Brain, 2021 - 2022'],
     achievements: [
       'Autoregressive Generative Models'
     ],
     image: '/images/people/you.jpg',
-    homepage: 'https://tackgeun.github.io/'
+    homepage: 'https://tackgeun.github.io'
   }
 ]; 
