@@ -47,7 +47,7 @@ export const peopleData: Person[] = [
     name: 'Dr. Soonkyum Kim',
     degree: 'Principal Researcher',
     education: 'PhD. in Mechanical Engineering and Applied Mechanics, University of Pennsylvania, 2013',
-    research: 'Autonomous Navigation, World Foundation Model',
+    research: 'Autonomous Navigation, Path Planning, Optimal Control Problem',
     work: ['KIST Embodied AGI Research Group, 2018 - Present', 'Samsung Electronics, 2015 - 2018', 'Postdoctoral Researcher, Carnegie Mellon University, 2013 - 2015'],
     achievements: [
       'Learning-based Trajectory Generation',
