@@ -8,6 +8,9 @@ export interface Person {
   achievements: string[];
   image: string;
   homepage?: string;
+  // Other spellings of the name used in publication author lists
+  // (spacing, hyphens and case are already ignored when matching).
+  aliases?: string[];
 }
 
 export const peopleData: Person[] = [
@@ -26,6 +29,7 @@ export const peopleData: Person[] = [
       'Technology transfer to Samsung, LG, and others'
     ],
     image: '/images/people/lim.png',
+    aliases: ['임화섭'],
     homepage: 'https://www.xrhumanlab.net'
   },
   {
@@ -40,6 +44,7 @@ export const peopleData: Person[] = [
       'UPnP based Robot Middleware'
     ],
     image: '/images/people/ahn.png',
+    aliases: ['Sang C. Ahn', '안상철'],
     homepage: 'https://sites.google.com/view/asckist'
   },
   {

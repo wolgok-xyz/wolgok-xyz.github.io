@@ -1,8 +1,38 @@
 'use client';
 
+import { Fragment } from 'react';
 import { motion } from 'framer-motion';
 import { publicationsData, type Publication } from '@/data/publications';
+import { peopleData } from '@/data/people';
 import { Users, BookOpen, FileText, ExternalLink, Youtube } from 'lucide-react';
+
+// Compare names ignoring case, spaces, hyphens and dots
+// ("Sang-Chul Ahn" == "SangChul Ahn" == "Sang Chul Ahn").
+const normalizeName = (name: string) => name.toLowerCase().replace(/[^a-z가-힣]/g, '');
+
+const memberNames = new Set(
+  peopleData
+    .flatMap((person) => [person.name.replace(/^Dr\.\s*/, ''), ...(person.aliases ?? [])])
+    .map(normalizeName)
+);
+
+function Authors({ authors }: { authors: string }) {
+  const names = authors.split(',').map((name) => name.trim());
+  return (
+    <span>
+      {names.map((name, i) => (
+        <Fragment key={i}>
+          {i > 0 && ', '}
+          {memberNames.has(normalizeName(name)) ? (
+            <strong className="font-semibold text-foreground">{name}</strong>
+          ) : (
+            name
+          )}
+        </Fragment>
+      ))}
+    </span>
+  );
+}
 
 const item = {
   hidden: { opacity: 0, y: 20 },
@@ -34,7 +64,7 @@ function PublicationItem({ publication }: { publication: Publication }) {
         <h3 className="text-lg font-semibold mb-2">{publication.title}</h3>
         <div className="flex items-start gap-2 text-sm text-muted-foreground mb-2">
           <Users className="h-4 w-4 mt-0.5 flex-shrink-0" />
-          <span>{publication.authors}</span>
+          <Authors authors={publication.authors} />
         </div>
         <div className="flex items-start gap-2 text-sm mb-2">
           <BookOpen className="h-4 w-4 mt-0.5 flex-shrink-0" />
