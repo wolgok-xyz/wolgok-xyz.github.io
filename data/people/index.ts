@@ -43,20 +43,6 @@ export const peopleData: Person[] = [
     homepage: 'https://sites.google.com/view/asckist'
   },
   {
-    id: 3,
-    name: 'Dr. Soonkyum Kim',
-    degree: 'Principal Researcher',
-    education: 'PhD. in Mechanical Engineering and Applied Mechanics, University of Pennsylvania, 2013',
-    research: 'Autonomous Navigation, Path Planning, Optimal Control Problem',
-    work: ['KIST Embodied AGI Research Group, 2018 - Present', 'Samsung Electronics, 2015 - 2018', 'Postdoctoral Researcher, Carnegie Mellon University, 2013 - 2015'],
-    achievements: [
-      'Learning-based Trajectory Generation',
-      'Omnidirectional Mobile Robot'
-    ],
-    image: '/images/people/skkim.jpg',
-    homepage: 'https://sites.google.com/site/kimsoonkyum'
-  },
-  {
     id: 4,
     name: 'Dr. Sehyuk Yim',
     degree: 'Principal Researcher',
