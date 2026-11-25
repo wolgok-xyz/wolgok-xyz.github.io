@@ -13,7 +13,7 @@ export default function PublicationsPage() {
     <div className="pt-24">
       <SectionContainer>
         <PageHeader
-          title="Recent Publications"
+          title="Publications"
           description="Our research publications in embodied artificial general intelligence and human-robot interaction."
         />
 
