@@ -15,10 +15,14 @@ function label(p: Publication) {
   return venue.length <= 24 ? `${venue} ${p.year}` : `${p.year}`;
 }
 
-// Newest year's international (non-domestic) publications.
-const international = publicationsData.filter((p) => !p.domestic);
-const latestYear = Math.max(...international.map((p) => p.year));
-const latest = international.filter((p) => p.year === latestYear);
+// The newest international (non-domestic) publications, always MAX_ITEMS.
+// Sorted by year (newest first); within the same year, entries higher up in
+// data/publications/index.ts come first — so add new papers at the top.
+const MAX_ITEMS = 4;
+const latest = publicationsData
+  .filter((p) => !p.domestic)
+  .sort((a, b) => b.year - a.year)
+  .slice(0, MAX_ITEMS);
 
 const list = {
   hidden: { opacity: 0 },
