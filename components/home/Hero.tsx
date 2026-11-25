@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
-import OpenToBadge from './OpenToBadge';
+import LatestBadge from './LatestBadge';
 
 export default function Hero() {
   const container = {
@@ -38,7 +38,7 @@ export default function Hero() {
         initial="hidden"
         animate="show"
       >
-        <OpenToBadge />
+        <LatestBadge />
         <motion.h1
           variants={item}
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight"
