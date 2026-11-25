@@ -12,6 +12,7 @@ export interface Publication {
   links: PublicationLink[];
   abstract?: string;
   videoId?: string;
+  domestic?: boolean; // Korean domestic venue; excluded from the homepage "New" badge
 }
 
 // Imported from https://erilab.xyz/publications/ (newest first), followed by MEIN lab selected publications.
@@ -55,6 +56,7 @@ export const publicationsData: Publication[] = [
     authors: "Chanwoo Kim, Sanghun Kim, Hwasup Lim",
     venue: "Journal of The Korea Society of Computer and Information, 31(4), pp. 55–66",
     year: 2026,
+    domestic: true,
     links: [{ label: "Paper", url: "https://journal.kci.go.kr/jksci/archive/articleView?artiId=ART003329458" }]
   },
   {
@@ -275,6 +277,7 @@ export const publicationsData: Publication[] = [
     authors: "Junseok Kang, Hyeonseok Yang, Hwasup Lim, Sang Chul Ahn",
     venue: "Journal of the HCI Society of Korea, 12(3), pp. 13–23",
     year: 2017,
+    domestic: true,
     links: [{ label: "Paper", url: "https://doi.org/10.17210/jhsk.2017.08.12.3.13" }]
   },
   {
@@ -379,6 +382,7 @@ export const publicationsData: Publication[] = [
     authors: "최희승, 안상철, 김익재",
     venue: "한국HCI학회 논문지",
     year: 2015,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867617" }]
   },
   {
@@ -467,6 +471,7 @@ export const publicationsData: Publication[] = [
     authors: "이형주, 이주현, 안상철, 유병현, 고희동, 김정현",
     venue: "한국정보과학회 한국컴퓨터종합학술대회 논문집",
     year: 2014,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867669" }]
   },
   {
@@ -483,6 +488,7 @@ export const publicationsData: Publication[] = [
     authors: "이형주, 안상철, 고희동",
     venue: "한국HCI학회 학술대회",
     year: 2014,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867675" }]
   },
   {
@@ -499,6 +505,7 @@ export const publicationsData: Publication[] = [
     authors: "정광순, 안상철, 고희동",
     venue: "한국HCI학회 학술대회",
     year: 2014,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867677" }]
   },
   {
@@ -507,6 +514,7 @@ export const publicationsData: Publication[] = [
     authors: "김정빈, 이주현, 안상철, 고희동",
     venue: "한국HCI학회 학술대회",
     year: 2014,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867678" }]
   },
   {
@@ -515,6 +523,7 @@ export const publicationsData: Publication[] = [
     authors: "이주현, 김진우, 김정빈, 안상철, 고희동",
     venue: "한국HCI학회 학술대회",
     year: 2014,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867680" }]
   },
   {
@@ -667,6 +676,7 @@ export const publicationsData: Publication[] = [
     authors: "안상철",
     venue: "로봇과 인간",
     year: 2011,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867781" }]
   },
   {
@@ -739,6 +749,7 @@ export const publicationsData: Publication[] = [
     authors: "안희준, 안상철",
     venue: "제어로봇시스템학회논문지",
     year: 2010,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867870" }]
   },
   {
@@ -747,6 +758,7 @@ export const publicationsData: Publication[] = [
     authors: "조지훈, 임기웅, 안상철, 권용무",
     venue: "대한전자공학회 하계학술대회",
     year: 2010,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867876" }]
   },
   {
@@ -755,6 +767,7 @@ export const publicationsData: Publication[] = [
     authors: "임기웅, 안상철, 권용무",
     venue: "대한전자공학회 하계학술대회",
     year: 2010,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867878" }]
   },
   {
@@ -763,6 +776,7 @@ export const publicationsData: Publication[] = [
     authors: "안희준, 이동수, 안상철",
     venue: "제어·로봇·시스템학회논문지 (Journal of Institute of Control, Robotics and Systems Engineering)",
     year: 2010,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867879" }]
   },
   {
@@ -915,6 +929,7 @@ export const publicationsData: Publication[] = [
     authors: "윤글영, 안희준, 안상철",
     venue: "대한전자공학회 하계종합학술대회",
     year: 2009,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867938" }]
   },
   {
@@ -923,6 +938,7 @@ export const publicationsData: Publication[] = [
     authors: "임기웅, 안상철, 권용무, 고희동, 김형곤",
     venue: "대한전자공학회 하계종합학술대회",
     year: 2009,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867941" }]
   },
   {
@@ -931,6 +947,7 @@ export const publicationsData: Publication[] = [
     authors: "김태윤, 안상철",
     venue: "대한전자공학회 하계종합학술대회",
     year: 2009,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867943" }]
   },
   {
@@ -939,6 +956,7 @@ export const publicationsData: Publication[] = [
     authors: "김경산, 안상철, 권용무, 고희동, 김형곤",
     venue: "로봇공학회논문지",
     year: 2009,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867961" }]
   },
   {
@@ -1027,6 +1045,7 @@ export const publicationsData: Publication[] = [
     authors: "안상철, 황재인",
     venue: "정보과학회지",
     year: 2008,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5867980" }]
   },
   {
@@ -1035,6 +1054,7 @@ export const publicationsData: Publication[] = [
     authors: "임새미, 김익재, 안상철, 김형곤",
     venue: "대한전자공학회논문지 CI",
     year: 2008,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868008" }]
   },
   {
@@ -1131,6 +1151,7 @@ export const publicationsData: Publication[] = [
     authors: "안상철, 이경준, 김형곤",
     venue: "컴퓨터그래픽스학회논문지",
     year: 2007,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868071" }]
   },
   {
@@ -1267,6 +1288,7 @@ export const publicationsData: Publication[] = [
     authors: "안상철, 이정우, 김형곤",
     venue: "대한전자공학회논문지",
     year: 2006,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868142" }]
   },
   {
@@ -1371,6 +1393,7 @@ export const publicationsData: Publication[] = [
     authors: "강동훈, 안상철, 고희동, 권용무, 김형곤",
     venue: "한국정보과학회지",
     year: 2005,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868166" }]
   },
   {
@@ -1467,6 +1490,7 @@ export const publicationsData: Publication[] = [
     authors: "오유화, 안상철, 김형곤, 김익재, 이성환",
     venue: "대한전자공학회논문지",
     year: 2004,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868232" }]
   },
   {
@@ -1515,6 +1539,7 @@ export const publicationsData: Publication[] = [
     authors: "이현진, 안상철, 김진욱, 강동훈, 고희동",
     venue: "감성공학회",
     year: 2003,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868246" }]
   },
   {
@@ -1523,6 +1548,7 @@ export const publicationsData: Publication[] = [
     authors: "김익재, 이상엽, 안상철, 권용무, 김형곤",
     venue: "HCI 학회",
     year: 2003,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868274" }]
   },
   {
@@ -1531,6 +1557,7 @@ export const publicationsData: Publication[] = [
     authors: "오상윤, 정병일, 김익재, 안상철, 김형곤, 고한석",
     venue: "HCI 학회",
     year: 2003,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868277" }]
   },
   {
@@ -1539,6 +1566,7 @@ export const publicationsData: Publication[] = [
     authors: "안상철, 김익재, 김형곤",
     venue: "전자공학회논문지",
     year: 2003,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868283" }]
   },
   {
@@ -1635,6 +1663,7 @@ export const publicationsData: Publication[] = [
     authors: "윤상민, 김익재, 안상철, 고한석, 김형곤",
     venue: "대한전자공학회 논문지",
     year: 2002,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868304" }]
   },
   {
@@ -1643,6 +1672,7 @@ export const publicationsData: Publication[] = [
     authors: "이상환, 안상철, 김형곤, 김재희",
     venue: "대한전자공학회 논문지",
     year: 2002,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868315" }]
   },
   {
@@ -1651,6 +1681,7 @@ export const publicationsData: Publication[] = [
     authors: "윤상민, 김익재, 안상철, 고한석, 김형곤",
     venue: "HCI 학술대회",
     year: 2002,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868318" }]
   },
   {
@@ -1659,6 +1690,7 @@ export const publicationsData: Publication[] = [
     authors: "오유화, 안상철, 김형곤",
     venue: "HCI 학술대회",
     year: 2002,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868319" }]
   },
   {
@@ -1691,6 +1723,7 @@ export const publicationsData: Publication[] = [
     authors: "윤상민, 김익재, 안상철, 김형곤, 고한석",
     venue: "신호처리학술대회 논문집",
     year: 2001,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868334" }]
   },
   {
@@ -1699,6 +1732,7 @@ export const publicationsData: Publication[] = [
     authors: "이상환, 안상철, 김형곤, 남시욱, 김재희",
     venue: "HCI 학술대회 논문집",
     year: 2001,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868351" }]
   },
   {
@@ -1731,6 +1765,7 @@ export const publicationsData: Publication[] = [
     authors: "이상환, 안상철, 김익재, 김형곤, 김재희",
     venue: "한국감성과학회 추계학술대회",
     year: 2000,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868357" }]
   },
   {
@@ -1739,6 +1774,7 @@ export const publicationsData: Publication[] = [
     authors: "이상환, 안상철, 김익재, 김형곤, 김재희",
     venue: "한국정보처리학회 추계학술발표논문집",
     year: 2000,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868362" }]
   },
   {
@@ -1747,6 +1783,7 @@ export const publicationsData: Publication[] = [
     authors: "김진우, 고한석, 김형곤, 권용무, 안상철",
     venue: "HCI 학술대회 논문집",
     year: 2000,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868380" }]
   },
   {
@@ -1755,6 +1792,7 @@ export const publicationsData: Publication[] = [
     authors: "주희열, 안상철, 김형곤, 고한석",
     venue: "HCI 학술대회 논문집",
     year: 2000,
+    domestic: true,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868383" }]
   },
   {

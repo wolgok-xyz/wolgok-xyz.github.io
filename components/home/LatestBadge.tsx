@@ -18,8 +18,10 @@ function label(p: Publication) {
   return venue.length <= 24 ? `${venue} ${p.year}` : `${p.year}`;
 }
 
-const latestYear = Math.max(...publicationsData.map((p) => p.year));
-const latest = publicationsData.filter((p) => p.year === latestYear);
+// Only international venues are featured in the badge.
+const international = publicationsData.filter((p) => !p.domestic);
+const latestYear = Math.max(...international.map((p) => p.year));
+const latest = international.filter((p) => p.year === latestYear);
 
 export default function LatestBadge() {
   const [index, setIndex] = useState(0);
