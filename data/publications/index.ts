@@ -14,7 +14,8 @@ export interface Publication {
   videoId?: string;
 }
 
-// Ordered newest first. Imported from https://erilab.xyz/publications/
+// Imported from https://erilab.xyz/publications/ (newest first), followed by MEIN lab selected publications.
+// The page groups entries by year, so new entries can be appended anywhere.
 export const publicationsData: Publication[] = [
   {
     id: 224,
@@ -1811,5 +1812,71 @@ export const publicationsData: Publication[] = [
     venue: "Proc. of Int'l Conf. on Automatic Face and Gesture Recognition (FG'98), pp. 76-81",
     year: 1998,
     links: [{ label: "Paper", url: "https://cai.kist.re.kr/Publication/?bmode=view&idx=5868444" }]
+  },
+
+  // Selected publications imported from https://sites.google.com/view/meinlab/home/publications
+  {
+    id: 232,
+    title: "A Minimally Designed Audio-Animatronic Robot",
+    authors: "S Yim et al.",
+    venue: "IEEE Transactions on Robotics",
+    year: 2024,
+    links: [{ label: "Paper", url: "https://ieeexplore.ieee.org/abstract/document/10551622" }]
+  },
+  {
+    id: 231,
+    title: "Animatronic Soft Robots by Additive Folding",
+    authors: "S Yim, C Sung, S Miyashita, D Rus, S Kim",
+    venue: "The International Journal of Robotics Research",
+    year: 2018,
+    links: [{ label: "Paper", url: "http://journals.sagepub.com/doi/10.1177/0278364918772023" }]
+  },
+  {
+    id: 230,
+    title: "Teleoperated Micromanipulation System Manufactured by Cut-and-Fold Techniques",
+    authors: "S Yim, S Miyashita, D Rus, S Kim",
+    venue: "IEEE Transactions on Robotics",
+    year: 2017,
+    links: [{ label: "Paper", url: "https://ieeexplore.ieee.org/abstract/document/7833189/" }]
+  },
+  {
+    id: 229,
+    title: "SoftCubes: Stretchable and Self-Assembling Three-Dimensional Soft Modular Matter",
+    authors: "S Yim, M Sitti",
+    venue: "The International Journal of Robotics Research",
+    year: 2014,
+    links: [{ label: "Paper", url: "http://journals.sagepub.com/doi/abs/10.1177/0278364914527630" }]
+  },
+  {
+    id: 228,
+    title: "Biopsy Using a Magnetic Capsule Endoscope Carrying, Releasing, and Retrieving Untethered Microgrippers",
+    authors: "S Yim, E Gultepe, DH Gracias, M Sitti",
+    venue: "IEEE Transactions on Biomedical Engineering",
+    year: 2014,
+    links: [{ label: "Paper", url: "https://www.ncbi.nlm.nih.gov/pubmed/24108454" }]
+  },
+  {
+    id: 227,
+    title: "3-D Localization Method for a Magnetically Actuated Soft Capsule Endoscope and Its Applications",
+    authors: "S Yim, M Sitti",
+    venue: "IEEE Transactions on Robotics",
+    year: 2013,
+    links: [{ label: "Paper", url: "https://ieeexplore.ieee.org/document/6547180/" }]
+  },
+  {
+    id: 226,
+    title: "Shape-Programmable Soft Capsule Robots for Semi-Implantable Drug Delivery",
+    authors: "S Yim, M Sitti",
+    venue: "IEEE Transactions on Robotics",
+    year: 2012,
+    links: [{ label: "Paper", url: "https://ieeexplore.ieee.org/document/6202349/" }]
+  },
+  {
+    id: 225,
+    title: "Design and Rolling Locomotion of a Magnetically Actuated Soft Capsule Endoscope",
+    authors: "S Yim, M Sitti",
+    venue: "IEEE Transactions on Robotics",
+    year: 2012,
+    links: [{ label: "Paper", url: "https://ieeexplore.ieee.org/document/5999728/" }]
   }
 ];
