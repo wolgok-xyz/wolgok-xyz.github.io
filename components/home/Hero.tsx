@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
-import LatestBadge from './LatestBadge';
+import LatestPublications from './LatestPublications';
 
 export default function Hero() {
   const container = {
@@ -29,16 +29,15 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-screen flex items-center justify-center">
+    <section className="relative min-h-screen flex items-center justify-center pt-24 pb-28">
       <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background" />
 
       <motion.div
-        className="text-center z-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+        className="w-full text-center z-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
         variants={container}
         initial="hidden"
         animate="show"
       >
-        <LatestBadge />
         <motion.h1
           variants={item}
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight"
@@ -59,12 +58,7 @@ export default function Hero() {
           Pioneering the future of artificial general intelligence through embodied learning and human-robot interaction research.
         </motion.p>
 
-        <motion.div
-          variants={item}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          {/* (Get in Touch button removed) */}
-        </motion.div>
+        <LatestPublications />
       </motion.div>
 
       <motion.div
