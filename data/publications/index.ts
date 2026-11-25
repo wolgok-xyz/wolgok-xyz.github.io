@@ -1818,7 +1818,7 @@ export const publicationsData: Publication[] = [
   {
     id: 232,
     title: "A Minimally Designed Audio-Animatronic Robot",
-    authors: "S Yim et al.",
+    authors: "Kyu Min Park, Jeongah Cheon, Sehyuk Yim",
     venue: "IEEE Transactions on Robotics",
     year: 2024,
     links: [{ label: "Paper", url: "https://ieeexplore.ieee.org/abstract/document/10551622" }]
@@ -1826,7 +1826,7 @@ export const publicationsData: Publication[] = [
   {
     id: 231,
     title: "Animatronic Soft Robots by Additive Folding",
-    authors: "S Yim, C Sung, S Miyashita, D Rus, S Kim",
+    authors: "Sehyuk Yim, Cynthia Sung, Shuhei Miyashita, Daniela Rus, Sangbae Kim",
     venue: "The International Journal of Robotics Research",
     year: 2018,
     links: [{ label: "Paper", url: "http://journals.sagepub.com/doi/10.1177/0278364918772023" }]
@@ -1834,7 +1834,7 @@ export const publicationsData: Publication[] = [
   {
     id: 230,
     title: "Teleoperated Micromanipulation System Manufactured by Cut-and-Fold Techniques",
-    authors: "S Yim, S Miyashita, D Rus, S Kim",
+    authors: "Sehyuk Yim, Shuhei Miyashita, Daniela Rus, Sangbae Kim",
     venue: "IEEE Transactions on Robotics",
     year: 2017,
     links: [{ label: "Paper", url: "https://ieeexplore.ieee.org/abstract/document/7833189/" }]
@@ -1842,7 +1842,7 @@ export const publicationsData: Publication[] = [
   {
     id: 229,
     title: "SoftCubes: Stretchable and Self-Assembling Three-Dimensional Soft Modular Matter",
-    authors: "S Yim, M Sitti",
+    authors: "Sehyuk Yim, Metin Sitti",
     venue: "The International Journal of Robotics Research",
     year: 2014,
     links: [{ label: "Paper", url: "http://journals.sagepub.com/doi/abs/10.1177/0278364914527630" }]
@@ -1850,7 +1850,7 @@ export const publicationsData: Publication[] = [
   {
     id: 228,
     title: "Biopsy Using a Magnetic Capsule Endoscope Carrying, Releasing, and Retrieving Untethered Microgrippers",
-    authors: "S Yim, E Gultepe, DH Gracias, M Sitti",
+    authors: "Sehyuk Yim, Evin Gultepe, David H. Gracias, Metin Sitti",
     venue: "IEEE Transactions on Biomedical Engineering",
     year: 2014,
     links: [{ label: "Paper", url: "https://www.ncbi.nlm.nih.gov/pubmed/24108454" }]
@@ -1858,7 +1858,7 @@ export const publicationsData: Publication[] = [
   {
     id: 227,
     title: "3-D Localization Method for a Magnetically Actuated Soft Capsule Endoscope and Its Applications",
-    authors: "S Yim, M Sitti",
+    authors: "Sehyuk Yim, Metin Sitti",
     venue: "IEEE Transactions on Robotics",
     year: 2013,
     links: [{ label: "Paper", url: "https://ieeexplore.ieee.org/document/6547180/" }]
@@ -1866,7 +1866,7 @@ export const publicationsData: Publication[] = [
   {
     id: 226,
     title: "Shape-Programmable Soft Capsule Robots for Semi-Implantable Drug Delivery",
-    authors: "S Yim, M Sitti",
+    authors: "Sehyuk Yim, Metin Sitti",
     venue: "IEEE Transactions on Robotics",
     year: 2012,
     links: [{ label: "Paper", url: "https://ieeexplore.ieee.org/document/6202349/" }]
@@ -1874,7 +1874,7 @@ export const publicationsData: Publication[] = [
   {
     id: 225,
     title: "Design and Rolling Locomotion of a Magnetically Actuated Soft Capsule Endoscope",
-    authors: "S Yim, M Sitti",
+    authors: "Sehyuk Yim, Metin Sitti",
     venue: "IEEE Transactions on Robotics",
     year: 2012,
     links: [{ label: "Paper", url: "https://ieeexplore.ieee.org/document/5999728/" }]
